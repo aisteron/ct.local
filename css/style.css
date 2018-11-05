@@ -249,10 +249,16 @@ mark {
 	padding: 100px 0;
 }
 .section-bottom-padding {
-	padding: 0 0 70px 0;
+	//padding: 0 0 70px 0;
 }
 .section-top-padding {
 	padding: 120px 0 0 0
+}
+.product-area .section-title {
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+	padding-top:3rem;
 }
 .section-title {
 	text-align: left;
@@ -266,6 +272,11 @@ mark {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+.tech .section-title h3 {
+
+	line-height: 50px;
+
 }
 .section-title p {
 	color: #000000;
@@ -1784,17 +1795,38 @@ mark {
 	position: relative;
 	background: rgba(0, 0, 0, 0.7);
 }
+
+.icons3 .single-fun-factor {
+	text-align: center;
+	padding: 40px 20px;
+	border: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	background: none;
+}
+
+.tech .single-fun-factor
+{
+	background: none;
+}
 .single-fun-factor:hover {
 	border-color: #01c6d9;
 }
 .single-fun-factor > h4 {
 	font-size: 24px;
-	line-height: 14px;
+	line-height: 24px;
 	margin-top: 20px;
 	position: relative;
 	margin-bottom: 0;
 	font-weight: 500;
 	color: #fff;
+}
+.icons3 .single-fun-factor h2
+{
+	color:#fff;
+	font-size:35px;
+	margin-top: 0.5em;
 }
 .single-fun-factor h2 {
 	font-size: 56px;
@@ -2005,6 +2037,20 @@ mark {
 	background-image: url(/img/banner/7.png);
 	background-size: cover;
 	background-position: center center;
+}
+.testimonial-area .col-12
+{
+	padding:2em 0;
+}
+.testimonial-area h3
+{
+	text-align:center;
+    color: #2d3e50;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .single-testimonial-area {
 	display: -webkit-box;
