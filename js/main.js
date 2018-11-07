@@ -338,5 +338,32 @@ $('.masonry__wrap').imagesLoaded(function () {
     });
 });
 
+
+
+/*smooth scroll*/
+
+$('ul#nav li a').on('click', function(e){
+e.preventDefault();
+//console.log($(this).attr('href'));
+
+/*document.querySelector('a[name="'+$(this).attr('href')+'"]').scrollIntoView({ 
+  behavior: 'smooth' 
+});*/
+
+var href = $(this).attr('href').replace('#','');
+
+//console.log($('a[name="'+href+'"]'));//
+    if($('a[name="'+href+'"]')[0])
+    {
+        $('a[name="'+href+'"]')[0].scrollIntoView({  behavior: 'smooth'  });
+    }
+    else 
+    {
+        console.log('нет якоря')
+    }
+
+    
+})
+
     
 })(jQuery); 

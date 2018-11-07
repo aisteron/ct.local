@@ -1803,7 +1803,7 @@ mark {
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	position: relative;
-	background: none;
+	//background: none;
 }
 
 .tech .single-fun-factor
