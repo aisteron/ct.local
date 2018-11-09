@@ -1548,6 +1548,9 @@ mark {
 .course-area {
 	background-color: #f5f5f5;
 }
+.course-area.c-price {
+	background-color: #eee;
+}
 .course-area .section-title-wrapper {
 	margin-bottom: 20px;
 }
