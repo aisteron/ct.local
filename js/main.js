@@ -342,8 +342,16 @@ $('.masonry__wrap').imagesLoaded(function () {
 
 /*smooth scroll*/
 
-$('ul#nav li a').on('click', function(e){
-e.preventDefault();
+$('ul#nav li a, .mobile-menu-area ul li a').on('click', function(e){
+  
+        if(typeof $(this).attr('rel') !== typeof undefined && $(this).attr('rel') !== false)
+        {
+            
+            console.log('external');
+            return;
+        }
+    e.preventDefault();
+
 //console.log($(this).attr('href'));
 
 /*document.querySelector('a[name="'+$(this).attr('href')+'"]').scrollIntoView({ 
@@ -365,5 +373,9 @@ var href = $(this).attr('href').replace('#','');
     
 })
 
+$('.slider-area a.button-default').click(function(e){
+    e.preventDefault();
+    $('.about-area.mt-95 h3')[0].scrollIntoView({  behavior: 'smooth'  });
+})
     
 })(jQuery); 
