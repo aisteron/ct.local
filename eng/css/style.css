@@ -1770,7 +1770,7 @@ mark {
 /*----------------------------------------*/
 
 .fun-factor-area {
-	background: rgba(0, 0, 0, 0) url("/img/banner/2.jpg") repeat scroll 0 0;
+	background: rgba(0, 0, 0, 0) url("/eng/img/banner/2.jpg") repeat scroll 0 0;
 	color: #ffffff;
 	background-size: cover;
 	background-position: top;
@@ -1838,7 +1838,7 @@ mark {
 	color: #01c6d9;
 }
 .fun-factor-area.fun-bg-img {
-	background-image: url(/img/banner/8.jpg);
+	background-image: url(../img/banner/8.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -2037,7 +2037,7 @@ mark {
 
 .testimonial-area {
 	padding: 75px 0;
-	background-image: url(/img/banner/7.png);
+	background-image: url(../img/banner/7.png);
 	background-size: cover;
 	background-position: center center;
 }
@@ -3360,7 +3360,7 @@ mark {
 /*----------------------------------------*/
 
 .breadcrumb-banner-area {
-	background: rgba(0, 0, 0, 0) url("/img/banner/8.jpg") no-repeat scroll 0 0;
+	background: rgba(0, 0, 0, 0) url("/eng/img/banner/8.jpg") no-repeat scroll 0 0;
 	color: #ffffff;
 	padding: 110px 0;
 	position: relative;
@@ -4839,4 +4839,88 @@ input.checkbox {
 }
 #scrollUp:hover {
 	background-color: #F4A012;
+}
+
+.c-price img.tech-met{width:100%;}
+@media (max-width: 480px) {
+	.tech img.tech-met{width:100%;}
+	
+	.product-area iframe {height:24vh;}
+}
+
+@media (min-width: 1200px)
+{
+	.product-area iframe 
+	{
+	    width: 73vw;
+		margin: 0 auto;
+    	display: block;
+	}
+}
+@media (max-width: 900px) 
+{
+	.product-area iframe 
+	{
+		height:46vh;
+	}
+}
+@media (max-width: 1200px) {
+	.product-area iframe 
+	{
+		/*margin-left: -9em;*/
+		width:100vw;
+
+	}
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    /*float: right;*/
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right:1em;
+    z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myModal .result p, #myModal .result img
+{
+	display: block;
+	text-align: center;
+	margin:0 auto;
+}
+#myModal .result
+{
+	margin: 0 auto;
 }

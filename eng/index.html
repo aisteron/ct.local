@@ -10,24 +10,15 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
-	<style>
-	    @charset "UTF-8";:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar}@-ms-viewport{width:device-width}header{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-12,.col-lg-5,.col-lg-7,.col-md-6{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.bg-white{background-color:#fff!important}@font-face{font-family:FontAwesome;src:url(fonts/fontawesome-webfont.eot?v=4.5.0);src:url(fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url(fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'),url(fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),url(fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-angle-up:before{content:"\f106"}html{overflow:hidden;overflow-y:auto}body{font-family:Poppins,sans-serif;font-weight:400;font-style:normal;font-size:14px;width:100%;color:#414141}a{outline:medium none;color:#434343}.as-mainwrapper{position:relative}.header-top{background:#334458 none repeat scroll 0 0;color:#fff;font-size:13px;position:relative}.header-top span{padding:20px 0;display:inline-block;font-family:Montserrat,sans-serif;font-size:13px;font-weight:400}.header-top-right{float:right}.header-top-right span:first-child{margin-right:25px}#scrollUp{bottom:45px;color:#fff;display:none;font-size:28px;height:40px;line-height:37px;position:fixed;right:12px;text-align:center;width:40px;z-index:9999;background-color:#01c6d9}@media (min-width:1200px) and (max-width:1500px){.container{width:1230px}.as-mainwrapper .container{width:1200px}.header-top:before{width:44%}.header-top:after{right:44%}}@media (min-width:992px) and (max-width:1199px){.container{width:970px}.header-top:before{width:53%}.header-top:after{right:53%}}@media (min-width:768px) and (max-width:991px){.container{max-width:750px}.header-top:before{width:48%}.header-top:after{right:48%}}@media (max-width:767px){.container{max-width:320px}.header-top span{padding:12px 0;text-align:center;display:block}.header-top-right{float:none}.header-top-right span:first-child{margin-right:0}}@media only screen and (min-width:480px) and (max-width:767px){.container{max-width:450px}}@media (max-width:768px){.header-top{display:none}}
-	</style>
-	<link rel="preload" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/bootstrap.min.css"></noscript>
-	<link rel="preload" href="/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/font-awesome.min.css"></noscript>
-	<link rel="preload" href="/css/material-design-iconic-font.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/material-design-iconic-font.min.css"></noscript>
-	<link rel="preload" href="/css/plugin.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/plugin.css"></noscript>
-	<link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-	<link rel="preload" href="/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/css/responsive.css"></noscript>
-	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+	<link rel="stylesheet" href="/eng/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/eng/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/eng/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="/eng/css/plugin.css">
+	<link rel="stylesheet" href="/eng/css/style.css">
+	<link rel="stylesheet" href="/eng/css/responsive.css">
 
-	<script src="/js/modernizr-2.8.3.min.js"></script>
+	<script src="/eng/js/modernizr-2.8.3.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
 
 </head>
 
@@ -58,7 +49,7 @@
                                 <div class="col-lg-3 col-12">
                                     <div class="logo">
                                         <a href="/">
-                                        	<img src="/img/logo2.png"></a>
+                                        	<img src="img/logo2.png"></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-9 col-12">
@@ -68,13 +59,13 @@
                                                 <ul id="nav">
                                                     
                                                     <li><a href="#about">О курсах</a></li>
-                                                    <li><a href="http://ct.fzn.by/#repetitor">Репетиторы</a></li>
-                                                    <li><a href="#subjects">Предметы</a>
+                                                    
+                                                    <li><a href="http://ct.fzn.by" rel="external">Предметы</a>
                                                         <ul class="sub-menu">
-                                                            <li><a href="#">Русский</a></li>
-                                                            <li><a href="#">Английский</a></li>
-                                                            <li><a href="#">История</a></li>
-                                                            <li><a href="#">Биология</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Русский</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Английский</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">История</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Биология</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><a href="#price">Стоимость</a></li>
@@ -105,13 +96,13 @@
                                             <ul>
                                              <p><a href="tel:+375336178090">+375 33 617 80 90</a></p>    
                                                 <li><a href="#about">О курсах</a></li>
-                                                    <li><a href="#rep">Репетиторы</a></li>
-                                                    <li><a href="#subjects">Предметы</a>
+                                                    
+                                                    <li><a href="http://ct.fzn.by" rel="external">Предметы</a>
                                                         <ul class="sub-menu">
-                                                            <li><a href="#">Русский</a></li>
-                                                            <li><a href="#">Английский</a></li>
-                                                            <li><a href="#">История</a></li>
-                                                            <li><a href="#">Биология</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Русский</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Английский</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">История</a></li>
+                                                            <li><a href="http://ct.fzn.by" rel="external">Биология</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><a href="#price">Стоимость</a></li>
@@ -162,7 +153,7 @@
                
                 
                 <!--About Area Start-->
-                <a name="about"></a> 
+                <a name='about'></a> 
                 <div class="about-area mt-95">
                     <div class="container">
                         <div class="row">
@@ -174,13 +165,13 @@
 
                                     <p>Поэтому решили совместить интересную подачу материала с постоянным мониторингом результатов наших учеников. При должном выполнении программы обучения - результаты у абитуриентов от 70 баллов гарантированы. Однако, процесс образования взаимен! Поэтому мы не обещаем золотых гор.</p>
                                     <p>Придётся поработать вместе!</p>
-                                    <a class="button-default" href="#" style="margin-bottom:21px">Подробнее</a>	      
+                                          
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <!--About Image Area Start-->
                                 <div class="about-image-area img-full">
-                                    <img src="/img/021.jpg">
+                                    <img src="img/021.jpg" >
                                 </div>
                                 <!--About Image Area End-->
                             </div>
@@ -194,6 +185,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="section-title-wrapper">
+                                    <a name="res"></a>
                                     <div class="section-title"> <h3>КАКИЕ РЕЗУЛЬТАТЫ ВЫ ПОЛУЧИТЕ:</h3> </div>
                                 </div>
                             </div>
@@ -201,7 +193,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-item">
-                                    <div class="single-item-image"><a href="#"><img src="/img/370-250_1.jpg" alt=""></a> </div>
+                                    <div class="single-item-image"><a href="#"><img src="img/370-250_1.jpg" alt=""></a> </div>
                                     <div class="single-item-text">
                                         <h4><a href="#">Подготовка к формату экзамена</a></h4>
                                         <p>Слушатели отрабатывают навыки сдачи экзамена в реальном времени: это дает возможность быстро увидеть свой результат и проработать ошибки. После прохождения курса подготовка сам экзамен не вызывает ощущения тревоги и стресса, и ученик сможет сконцентрироваться на самих заданиях, что повысит эффективность и качество их выполнения.</p>
@@ -212,7 +204,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-item">
-                                    <div class="single-item-image"><a href="#"><img src="/img/370-250_2.jpg" alt=""></a> </div>
+                                    <div class="single-item-image"><a href="#"><img src="img/370-250_2.jpg" alt=""></a> </div>
                                     <div class="single-item-text">
                                         <h4><a href="#">Прочная основа английского языка</a></h4>
                                         <p>Ученики начинают понимать структуру языка, а значит, могут грамотно построить любое предложение, не задумываясь о правилах.  Благодаря развитию контекстуальной догадки типовые задачи в тестах решаются быстро и легко.</p>
@@ -222,7 +214,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-item">
-                                    <div class="single-item-image"><a href="#"><img src="/img/370-250_3.jpg" alt=""></a> </div>
+                                    <div class="single-item-image"><a href="#"><img src="img/370-250_3.jpg" alt=""></a> </div>
                                     <div class="single-item-text">
                                         <h4><a href="#">70 и более баллов на ЦТ</a></h4>
                                         <p>Благодаря занятиям, у студентов будет не только отличная база для сдачи экзамена, но и появился множество новых возможностей для общения, новые друзья и положительные эмоции. Результаты учеников на ЦТ — <b>более 70 баллов.</b> Конечно, при должном усвоении всей программы и выполнении всех требований.</p>   
@@ -275,7 +267,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-fun-factor mb-30">
-                                    <img src="/img/met1.png" alt="">
+                                    <img src="img/met1.png" alt="" class='tech-met'>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
@@ -292,6 +284,41 @@
                     </div>
                 </div>        
                 <!--/собственные технологии -->
+                <!--стоимость курса-->
+                <a name='price'></a>
+                <div class="course-area section-padding c-price">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>СТОИМОСТЬ КУРСА:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <img src="img/374-374.jpg" alt="" class='tech-met'>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+
+                                <p style="font-size: 4em">14 р.</p>
+                                <p>За 14 рублей вы сможете посетить 2 занятия в неделю по 90 минут каждое.</p>
+                                <p>Таким образом стоимость в месяц составит <span style="font-size:20px">112 р.</span></p>
+
+                                <p style="margin-top:1em;font-size: 2rem">Способ оплаты:</p>
+                                <p>Занятия оплачиваются по банковским реквизитам в банке или с помощью ЕРИП</p>
+                                <p style="margin-top:1em;font-size: 2rem">Первое занятие бесплатное!</p>
+                                <div class="slider-btn"><a href="#" class="button-default order-button" >Записаться</a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--/стоимость--->
 
                 <!--3 icons Start-->
                 <div class="fun-factor-area icons3">
@@ -299,21 +326,21 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-fun-factor mb-30">
-                                    <img src="/img/max_students.svg" style="width:120px">
+                                    <img src="img/max_students.svg" style="width:120px">
                                     <h2>3 - 10</h2>
                                     <h4>учеников в группе</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-fun-factor mb-30">
-                                    <img src="/img/free_test.svg" style="width:120px">
+                                    <img src="img/free_test.svg" style="width:120px">
                                     <h2>Первое</h2>
                                     <h4>бесплатное занятие</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="single-fun-factor mb-30">
-                                    <img src="/img/food.svg" style="width:120px">
+                                    <img src="img/food.svg" style="width:120px">
                                     <h2>+34 балла</h2>
                                     <h4>улучшение результата при обучении в Фабрике знаний</h4>
                                 </div>
@@ -336,26 +363,29 @@
                                     </div>
                                 </div>
 
-                                <iframe width="100%" height="515" src="https://www.youtube.com/embed/xB0l1NvfiIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
                             </div>
                         </div>
                    
                         
                     </div>
+
+                    <iframe width="100%" height="515" src="https://www.youtube.com/embed/xB0l1NvfiIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <!--End of Online Product Area-->
                 <div class="testimonial-area">
+                    <a name="testimonials"></a>
                     <h3>ОТЗЫВЫ</h3>
                     <div class="container">
                         <div class="row">
                             <div class="testimonial-slider owl-carousel">
     
-                                <div class="item">
+                                <div class="item" >
                                     <div class="col-12">
 
                                         <div class="single-testimonial-area">
                                             <div class="testimonial-image">
-                                                <img src="/img/100-100_2.png" alt="">
+                                                <img src="img/100-100_2.png" alt="">
                                             </div>
                                             <div class="testimonial-content">
                                                 <p class="author-desc">Хожу на курсы в "Фабрику знаний" на предметы: английский и обществоведение. Преподаватели очень хорошие, и не только в образователтном процессе, но и в общении. Во время занятий все проходит очень спокойно, никто не кричит ни на кого, и как можно выпить чаю с печеньками 😜👌</p>
@@ -367,12 +397,12 @@
 
                                     </div>
                                 </div>
-                                <div class="item">
+                                <div class="item" >
                                     <div class="col-12">
 
                                         <div class="single-testimonial-area">
                                             <div class="testimonial-image">
-                                                <img src="/img/100-100_1.png" alt="">
+                                                <img src="img/100-100_1.png" alt="">
                                             </div>
                                             <div class="testimonial-content">
                                                 <p class="author-desc">С сентября посещаю курсы по русскому и английскому) Все очень нравится, преподаватели спокойные, интересные и веселые, с ними легко и приятно работать вместе. Все организовано отлично. Есть даже чай и кофе) Спасибо :з</p>
@@ -385,12 +415,12 @@
 
                                 
 
-                                <div class="item">
+                                <div class="item" >
                                     <div class="col-12">
 
                                         <div class="single-testimonial-area">
                                             <div class="testimonial-image">
-                                                <img src="/img/100-100_3.png" alt="">
+                                                <img src="img/100-100_3.png" alt="">
                                             </div>
                                             <div class="testimonial-content">
                                                 <p class="author-desc">Удивительно, как людям удалось создать столь благотворную обучению атмосферу в небольшой комнате в центре города. Сама о курсах узнала от подруг и ни разу не пожалела. Хожу на биологию, группа небольшая, что удобно, преподаватель восхитителен, что прекрасно.</p>
@@ -425,12 +455,13 @@
                                 </div>
                                 <div class="col-lg-7 col-md-7">
                                     <div class="newsletter-form angle">
-                                        <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mc-form footer-newsletter fix">
+                                        <form id="mc-embedded-subscribe-form" class="mc-form footer-newsletter fix">
                                             <div class="subscribe-form">
-                                                <input id="mc-email" type="email" autocomplete="off" placeholder="+375 29 xxx xx xx">
+                                                <input id="mc-email" type="text" autocomplete="off" placeholder="+375 29 xxx xx xx" required="required">
                                                 <button id="mc-submit" type="submit">ОТПРАВИТЬ</button>
                                             </div>    
                                         </form>
+
                                         <!-- mailchimp-alerts Start -->
                                         <div class="mailchimp-alerts text-centre fix pull-right">
                                             <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
@@ -446,12 +477,13 @@
                     <!--End of Newsletter Area-->
                     <!--Footer Widget Area Start-->
                     <div class="footer-widget-area">
+                        <a name="contact"></a>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-3 col-md-6">
                                     <div class="single-footer-widget">
                                         <div class="footer-logo">
-                                            <a href="/index.html"><img src="/img/logo_invert.png" alt=""></a>
+                                            <a href="#"><img src="img/logo_invert.png" alt=""></a>
                                         </div>
                                         <p>Наша миссия - предоставить каждому абитуриенту высокий уровень подготовки к Централизованному Тестированию </p>
                                         <div class="social-icons">
@@ -511,6 +543,30 @@
                     </div>
                     <!--End of Footer Area-->
                 </footer>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="h4">Просто оставьте свой номер телефона и мы вам перезвоним</p>
+                                <form id='modalForm'>
+                                    <div class="form-group">
+                                    <label for="examplePhoneNo">Номер телефона</label>
+                                    <input type="text" class="form-control" id="examplePhoneNo" aria-describedby="textHelp" placeholder="+375 29 xxx xx xx" required="required">
+                                    <small id="emailHelp" class="form-text text-muted">Используя это форму вы соглашаетесь с <span style="text-decoration: underline;">Политикой конфиденциальности</span></small>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>            
+                  </div>
+
+                </div>
 			
 		</div>
 		<!-- /.bg-white -->
@@ -519,15 +575,18 @@
 	<!-- /.as-mainwrapper -->
 
 	<div class="sctipts-area">
-		<script src="/js/jquery-1.12.4.min.js"></script>
-		<script src="/js/popper.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/ajax-mail.js"></script>
-		<script src="/js/plugins.js"></script>
-		<script src="/js/main.js"></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ajax-mail.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50071654 = new Ya.Metrika2({ id:50071654, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/50071654" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 	</div>
 
-	<a id="scrollUp" href="#top" style="position: fixed; 
+	<a id="scrollUp" href="#top" 
+		style="position: fixed; 
 		z-index: 2147483647; 
 		display: none;">
 		<i class="fa fa-angle-up"></i>
