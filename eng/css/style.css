@@ -4895,6 +4895,17 @@ input.checkbox {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
+@media (min-width: 966px)
+{
+	.modal-content
+	{
+		width:770px;
+	}
+	.form-control
+	{
+		width:400px;
+	}
+}
 
 /* The Close Button */
 .close {
