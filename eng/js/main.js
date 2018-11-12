@@ -306,7 +306,11 @@ if($('#Instafeed').length) {
         get: 'user',
         
         userId: '4942755072',
-        accessToken: '4942755072'
+        accessToken: '4942755072.1677ed0.04ed143d33b247348edbada7ebe77256',
+        target: 'Instafeed',
+        resolution: 'thumbnail',
+        limit: 6,
+        template: '<li><a href="{{link}}" target="_new"><img src="{{image}}" /></a></li>',
         });
     feed.run(); 
 }
