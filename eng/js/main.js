@@ -292,15 +292,22 @@ $('.single-slide-menu a').on('click',function(e){
 	 Instafeed active 
 ------------------------------------*/
 if($('#Instafeed').length) {
-    var feed = new Instafeed({
+    /*var feed = new Instafeed({
         get: 'user',
-        userId: 6665768655,
-        accessToken: '6665768655.1677ed0.313e6c96807c45d8900b4f680650dee5',
+        userId: 4942755072,
+        accessToken: '4942755072.1677ed0.313e6c96807c45d8900b4f680650dee5',
         target: 'Instafeed',
         resolution: 'thumbnail',
         limit: 6,
         template: '<li><a href="{{link}}" target="_new"><img src="{{image}}" /></a></li>',
-    });
+    });*/
+
+    var feed = new Instafeed({
+        get: 'user',
+        
+        userId: '4942755072',
+        accessToken: '4942755072'
+        });
     feed.run(); 
 }
 /*=============  Gallery Mesonry Activation  ==============*/
