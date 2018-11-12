@@ -459,6 +459,12 @@ mark {
 .mt-95 {
 	margin-top: 95px
 }
+
+.about-area
+{
+	background-image: url(../img/900-600.jpg);
+	padding-top:4em;
+}
 .mt-100 {
 	margin-top: 100px
 }

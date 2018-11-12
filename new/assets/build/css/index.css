@@ -3,15 +3,15 @@ body {
   font-family: 'Verdana', Lucida Sans, Lucida Sans Unicode, sans-serif;
   color: #334458;
   margin: 0;
-  background: #feffff;
-  background: -moz-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
-  background: -webkit-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
-  background: linear-gradient(to bottom, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
-  background-repeat: no-repeat;
 }
 .wrap {
   width: 960px;
   margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .wrap {
+    width: 100%;
+  }
 }
 .wrap header {
   display: flex;
@@ -91,6 +91,7 @@ body {
 .wrap .menu ul {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 .wrap .menu ul li {
   list-style-type: none;
@@ -107,8 +108,31 @@ body {
   border-bottom: 2px solid #C1272D;
   color: #29ABE2;
 }
+.wrap .shock {
+  width: 960px;
+}
+@media (max-width: 960px) {
+  .wrap .shock {
+    width: 100%;
+  }
+}
 .wrap .shock .container {
+  padding-bottom: 1em;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  background: #feffff;
+  background: -moz-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background: -webkit-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background: linear-gradient(to bottom, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .wrap .shock .container {
+    margin-left: calc(-50vw - 8.016px);
+  }
 }
 .wrap .shock .container img {
   margin: 0 auto;
@@ -118,6 +142,42 @@ body {
   background-color: #ffac28;
   text-align: center;
   width: 100vw;
-  transform: translateX(calc((40em - 100vw)/2));
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw);
+  margin-top: -270px;
+  padding: 1em 0;
+}
+.wrap .shock .container .label p {
+  color: #C1272D;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 80%;
+}
+.wrap .shock .container a.try-button {
+  padding: 1em;
+  color: #fff;
+  background-color: #C1272D;
+  text-transform: uppercase;
+  width: 9em;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4em;
+  border-radius: 0.4em;
+  z-index: 2;
+  position: relative;
+}
+.wrap .shock .container a.try-button:hover {
+  background-color: #ffac28;
+}
+.wrap .shock .container .desc {
+  width: 960px;
+  margin: 0 auto;
+}
+.wrap .shock .container .desc p {
+  text-align: justify;
 }
 /*# sourceMappingURL=assets/build/css/index.css.map */
