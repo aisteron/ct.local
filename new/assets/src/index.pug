@@ -3,6 +3,7 @@ html
 	head
 		title test
 		link(rel="stylesheet" type="text/css" href="assets/build/css/index.css")
+		link(rel="shortcut icon" href="favicon.ico")
 	body
 		.wrap
 			header
@@ -39,7 +40,7 @@ html
 						a(href="#") Контакты
 			.shock.container
 				.inner
-					img(src="assets/img/shock.png")
+					img(src="assets/img/shock-8.png")
 					.label
 						p Хочешь максимально подготовиться к ЦТ?
 						p НЕ ПАНИКУЙ!
@@ -94,36 +95,169 @@ html
 					h2 Сми о нас
 					.video
 						.item
-							iframe(width="100%" height="350" src="https://www.youtube.com/embed/so38SPgaT5E?start=1210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							iframe.lazyload(width="100%" height="350" data-src="https://www.youtube.com/embed/so38SPgaT5E?start=1210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 							p Беларусь-2. Александр Луцевич: "Что выбрать - факультативы, репетиторов или курсы подготовки к ЦТ?"
 						.item
-							iframe(width="100%" height="350" src="https://www.youtube.com/embed/lUJUwSzkzc8?start=831" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							iframe.lazyload(width="100%" height="350" data-src="https://www.youtube.com/embed/lUJUwSzkzc8?start=831" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 							p Беларусь-2. Александр Луцевич: "В защиту абитуриентов"
 						.item
-							iframe(width="100%" height="350" src="https://www.youtube.com/embed/f7W9v5x9T2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							iframe.lazyload(width="100%" height="350" data-src="https://www.youtube.com/embed/f7W9v5x9T2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 							p Эфир Еврорадио. Александр Луцевич: "Об итогах 2016-2017 учебного года"
 						.item
-							iframe(width="100%" height="350" src="https://www.youtube.com/embed/1MFvOb8NJrg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							iframe.lazyload(width="100%" height="350" data-src="https://www.youtube.com/embed/1MFvOb8NJrg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 							p Эфир Еврорадио. Александр Луцевич: "Об итогах вступительной компании 2017 года"
 			.steps.container
 				.inner
 					h2 Как стать нашим учеником
 					table
 						tr
-							td.step1
-								.arrow
+							td.step.left
+								.inner.step1
+								p.number 01
+								p.descr Выбираете предметы <br>для обучения
 							td
 						tr
 							td
-							td 02
+							td.step.right
+								.inner.step2
+								p.number 02
+								p.descr(style="top: 4px; right: 9.5rem;") Ищете друзей, чтобы <br> записаться вместе <br>со скидкой
 						tr
-							td 03
+							td.step.left
+								.inner.step3
+								p.number 03
+								p.descr(style="top: 4px; right: 9.5rem;") Звоните нам или <br>оставляете заявку на <br>сайте	
 							td
-		
+						tr
+							td
+							td.step.right
+								.inner.step4
+								p.number 04
+								p.descr(style="top: 4px; right: 9.5rem;") Согласовываете <br>с менеджером<br> расписание занятий
+						tr
+							td.step.left
+								.inner.step5
+								p.number 05
+								p.descr Посещаете первое <br>занятие БЕСПЛАТНО
+							td
+						tr
+							td
+							td.step.right
+								.inner.step6
+								p.number 06
+								p.descr(style="top: 4px; right: 9.5rem;") Если всё подошло, то <br>заключаете договор и <br>начинаете обучение
+						tr
+							td.step.left
+								.inner.step7
+								p.number 07
+								p.descr Усердно выполняете <br>программу курсов
+							td
+						tr
+							td
+							td.step.right
+								.inner.step8
+								p.number 08
+								p.descr Успешно сдаете ЦТ
+						tr
+							td.step.left
+								.inner.step9
+								p.number 09
+								p.descr(style="top: -4px; right: 9.5rem; font-size:0.8rem") Пишите отзыв, чтобы к нам приходили ученики и уровень образования в Беларуси повышался :)
+							td
+			.result.container
+				.inner
+					h2 В результате, вы получите
+					ul
+						li Высокие баллы на ЦТ
+						li Качественное образование для дальнейшей учебы и жизни
+						li Поступление в выбранный университет
+					img.lazyload(data-src="assets/img/345365.png")
+			.testimonials.container.lazyload(data-script="assets/src/js/swiper.min.js" data-link="assets/build/css/swiper.min.css")
+				.inner
+					h2 Отзывы
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_0.jpg')
+								p Алина Михальская
+								p Всем доброго времени суток.
+
+								p Занимаюсь в Фабрике знаний на курсах по математике второй месяц и очень довольна. Для меня это глоток позитива в рутинной подготовке к цт. Наш молодой преподаватель Мария Ивановна излагает материал в понятной нам форме,а главное,делает это в достаточно лёгкой и даже игровой форме. На курсах можно и посмеяться,и действительно пораскинуть мозгами. 
+
+								p(style="padding-bottom: 1em;") Руководители очень приветливые и отзывчивые люди. Например Кирилл,который лично мне помог в переписке узнать все о ФЗ) В общем,фабрика знаний это то место,где вы действительно осознаете и прочувствуете,что наука и учеба это не наказание,а нечто реально интересное и не сложное,если разобраться и разложить все по полочкам
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_1.jpg')
+								p Алексей Ластовский
+								p Так получилось, что я немного запоздал с подготовкой к цт）и узнал как раз про курсы '' Фабрика знаний'' у них есть специально разработанная система по подготовки к цт за короткий срок обучения （3 месяца）и на самом деле преподаватели учат очень круто！
+
+								p Все рассказывают и объясняют понятно и интересно）я занимаюсь по истории Беларуси, и я очень доволен своими результатами）курсы очень крутые！так что ребята, те кто хочет поступать и хочет быть уверен в своих хороших результатах, все сюда в фабрику знаний！
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_2.jpg')
+								p Надежда Шейбак
+								p Готовлюсь к цт по Истории Беларуси. Очень мудрый подход к подготовке, потому что материал не только излагают, но и требуют его знание. Подача очень живая, всегда интересно и конечно же юмор. А так же наш преподаватель не только отличный оратор и историк, но и очень умный и интересный человек. Спасибо Фабрике Знаний и руководителю.
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_3.jpg')
+								p Илья Трусковский
+								p Посещаю экспресс-курсы по истории и русскому языку. Преподаватели высоко квалифицированные специалисты, материал воспринимается отлично. Процесс обучения построен очень грамотно, доволен результатом!
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_4.jpg')
+								p Янина Македон
+								p Удивительно, как людям удалось создать столь благотворную обучению атмосферу в небольшой комнате в центре города. Сама о курсах узнала от подруг и ни разу не пожалела. Хожу на биологию, группа небольшая, что удобно, преподаватель восхитителен, что прекрасно. 
+
+								p У меня большой упор идет на самоподготовку, но все расскажется, объясниться и уж точно не останется не понятым. Все очень хорошо, плодотворно и так, как нужно. К тому же и подкармливается чаем с печеньем. В общем, чувствую себя умнее и чуть счастливее каждый вторник и четверг.
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_5.jpg')
+								p Дарья Воривончик
+								p Добрый день.
+
+								p Хожу на курсы в Фабрику Знаний с сентября,и моей радости нет предела) Преподаватели просто отличные, с ними очень легко найти общий язык. Занятия проходят всегда в очень уютной и комфортной атмосфере. Преподаватели всегда всё просто и понятно объясняют, но если вдруг возникают какие-то вопросы, их легко решить написав или сказав о них преподавателю. Советую всем, не пожалеете
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_6.jpg')
+								p Анна Андреева
+								p Хожу на курсы по русскому,математике и химии.
+
+								p Преподаватели толково объясняют материал и умело находят подход к каждому. Юмор и понимание присутствуют на занятиях)
+
+								p Конечно не могу не отметить,что молодой возраст играет большую роль в обучении. Молодые преподаватели с понимаем относятся к подаче своего предмета.
+
+							.swiper-slide
+								img.lazyload(data-src='assets/img/testi-slider/160-160_7.jpg')
+								p Александр Стружко
+								p Записался с марта на курсы ФЗ по обществоведению. Хочется сразу назвать яркие плюсы .Такие вещи, как четко намеченный курс , изложение всех деталей (мельчайших), чего в школьной программе не выделяют , к сожалению... немаловажно также то ,что мысли и "скользкие моменты " ,которые возникают у многих , всегда приветствуюся и готовы к обсуждению. 
+
+								p Лёгкая и приятная атмосфера занятия ,которая совмещает в себе все ,что нужно для подачи материала .Остаётся только впитать в себя информацию. Александр ,наш преподаватель, отлично подаёт ту самую информацию ,кстати говоря ,запомнив полностью которую, любой абитуриент сможет застолбить себе место среди стобальников.
+
+ 
+						.swiper-pagination
+						.swiper-button-next
+						.swiper-button-prev
+			
+			.why.container
+				.inner
+					h2 Почему мы?
+					.wrapper
+						.item
+							img.lazyload(data-src="assets/img/why/001.svg")
+							p Занятия в центре города (ст.м. "Пл.Победы")
+						.item
+							img.lazyload(data-src="assets/img/why/002.svg")
+							p Баллы на ЦТ от 80 при выполнении программы
+						.item
+							img.lazyload(data-src="assets/img/why/003.svg")
+							p Чай и кофе для восстановления сил	
+						.item
+							img.lazyload(data-src="assets/img/why/004.svg")
+							p Честные цены	
+						.item
+							img.lazyload(data-src="assets/img/why/005.svg")
+							p 652 выпускника с 2016 года
+						.item
+							img.lazyload(data-src="assets/img/why/006.svg")
+							p Талантливые репетиторы
+						.item
+							img.lazyload(data-src="assets/img/why/007.svg")
+							p Удобное расписание
 
 		.script-area
 			script(src="assets/src/js/lazysizes.min.js" defer async)
-
-
-
-
+			script(src="assets/src/js/ls.unveilhooks.min.js" defer async)
