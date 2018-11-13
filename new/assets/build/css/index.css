@@ -108,37 +108,49 @@ body {
   border-bottom: 2px solid #C1272D;
   color: #29ABE2;
 }
-.wrap .shock {
-  width: 960px;
-}
-@media (max-width: 960px) {
-  .wrap .shock {
-    width: 100%;
-  }
-}
-.wrap .shock .container {
-  padding-bottom: 1em;
+.wrap .container {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
+  background-color: #9fd7ee;
+}
+@media (min-width: 1400px) {
+  .wrap .container {
+    margin-left: calc(-50vw - 8.016px);
+  }
+}
+.wrap .inner {
+  width: 960px;
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .wrap .inner {
+    width: 100%;
+  }
+}
+.wrap h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #334458;
+  padding: 0 0 0.5rem 0;
+  margin: 0 0 1em 0;
+  border-bottom: 2px solid #334458;
+}
+.wrap .shock.container {
+  padding-bottom: 1em;
   background: #feffff;
   background: -moz-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
   background: -webkit-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
   background: linear-gradient(to bottom, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
   background-repeat: no-repeat;
 }
-@media (min-width: 1400px) {
-  .wrap .shock .container {
-    margin-left: calc(-50vw - 8.016px);
-  }
-}
-.wrap .shock .container img {
+.wrap .shock.container .inner img {
   margin: 0 auto;
   display: block;
 }
-.wrap .shock .container .label {
+.wrap .shock.container .inner .label {
   background-color: #ffac28;
   text-align: center;
   width: 100vw;
@@ -149,13 +161,13 @@ body {
   margin-top: -270px;
   padding: 1em 0;
 }
-.wrap .shock .container .label p {
+.wrap .shock.container .inner .label p {
   color: #C1272D;
   font-size: 1.3em;
   font-weight: 600;
   line-height: 80%;
 }
-.wrap .shock .container a.try-button {
+.wrap .shock.container .inner a.try-button {
   padding: 1em;
   color: #fff;
   background-color: #C1272D;
@@ -170,14 +182,183 @@ body {
   z-index: 2;
   position: relative;
 }
-.wrap .shock .container a.try-button:hover {
+.wrap .shock.container .inner a.try-button:hover {
   background-color: #ffac28;
 }
-.wrap .shock .container .desc {
+.wrap .shock.container .inner .desc {
   width: 960px;
   margin: 0 auto;
 }
-.wrap .shock .container .desc p {
+.wrap .shock.container .inner .desc p {
   text-align: justify;
+}
+.wrap .subjects.container .inner table {
+  width: 100%;
+  color: #fff;
+  padding: 4em 0;
+}
+.wrap .subjects.container .inner table tr td {
+  padding: 0.5rem;
+  text-align: center;
+}
+.wrap .command.container {
+  padding-bottom: 3rem;
+}
+.wrap .smi.container .inner .video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+.wrap .smi.container .inner .video .item {
+  width: 450px;
+  margin-bottom: 1rem;
+}
+.wrap .smi.container .inner .video .item p {
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+}
+.wrap .steps.container .inner ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.wrap .steps.container .inner ul:before {
+  position: absolute;
+  left: 50%;
+  top: 3em;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 500px;
+  background: #716557;
+}
+.wrap .steps.container .inner ul li {
+  list-style-type: none;
+  position: relative;
+}
+.wrap .steps.container .inner ul li:after {
+  position: absolute;
+  top: 44px;
+  content: ' ';
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  z-index: 2;
+}
+.wrap .steps.container .inner ul li.purple {
+  top: 200px;
+  right: 2em;
+}
+.wrap .steps.container .inner ul li.purple:after {
+  border: 3px solid purple;
+  right: 429px;
+}
+.wrap .steps.container .inner ul li.blue:after {
+  border: 3px solid #2e7fb7;
+  left: 468px;
+}
+.wrap .steps.container .inner ul li .arrow {
+  position: relative;
+  width: 240px;
+  border-width: 90px 0px 0;
+  border-style: solid;
+}
+.wrap .steps.container .inner ul li .arrow.left-arrow span.number {
+  position: absolute;
+  top: -65px;
+  z-index: 2;
+  font-size: 2em;
+  left: -20px;
+}
+.wrap .steps.container .inner ul li .arrow.left-arrow span.desc {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  top: -61px;
+  left: 47px;
+  font-size: 0.9rem;
+}
+.wrap .steps.container .inner ul li .arrow.left-arrow:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -63px;
+  right: -62px;
+  border-width: 0 45px 36px;
+  border-style: solid;
+  transform: rotate(90deg);
+}
+.wrap .steps.container .inner ul li .arrow.left-arrow:after {
+  content: "";
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  top: -77px;
+  border-width: 5px;
+  border-style: solid;
+  left: -32px;
+  box-shadow: 0 0 0 5px white;
+}
+.wrap .steps.container .inner ul li .arrow.right-arrow {
+  position: absolute;
+  right: 0;
+}
+.wrap .steps.container .inner ul li .arrow.right-arrow span.number {
+  position: absolute;
+  top: -65px;
+  z-index: 2;
+  font-size: 2em;
+  right: -20px;
+}
+.wrap .steps.container .inner ul li .arrow.right-arrow span.desc {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  top: -65px;
+  left: 0;
+  font-size: 0.9rem;
+}
+.wrap .steps.container .inner ul li .arrow.right-arrow:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -77px;
+  left: -31px;
+  border-width: 0 31px 64px;
+  border-style: solid;
+  transform: rotate(45deg);
+}
+.wrap .steps.container .inner ul li .arrow.right-arrow:after {
+  content: "";
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  top: -77px;
+  border-width: 5px;
+  border-style: solid;
+  right: -32px;
+  box-shadow: 0 0 0 5px white;
+}
+.wrap .steps.container .inner ul li .arrow.blue {
+  border-color: #2e7fb7 transparent;
+}
+.wrap .steps.container .inner ul li .arrow.blue:before {
+  border-color: transparent transparent #2e7fb7;
+}
+.wrap .steps.container .inner ul li .arrow.blue:after {
+  border-color: #2e7fb7;
 }
 /*# sourceMappingURL=assets/build/css/index.css.map */
