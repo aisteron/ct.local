@@ -167,7 +167,11 @@ body {
   font-weight: 600;
   line-height: 80%;
 }
-.wrap .shock.container .inner a.try-button {
+.wrap .shock.container .inner a.try-button,
+.wrap .why.container .inner a.try-button,
+.wrap .price.container .inner .wrap .item span.label,
+.wrap .faq.container .inner .question-area ul li,
+.wrap .form.container .inner form input[type="submit"] {
   padding: 1em;
   color: #fff;
   background-color: #C1272D;
@@ -593,6 +597,7 @@ body {
 .wrap .why.container {
   background-color: #eee;
   padding-top: 3rem;
+  padding-bottom: 1.5rem;
 }
 .wrap .why.container .inner .wrapper {
   display: flex;
@@ -601,6 +606,7 @@ body {
 }
 .wrap .why.container .inner .wrapper .item {
   width: 200px;
+  margin-bottom: 2rem;
 }
 .wrap .why.container .inner .wrapper img {
   width: 120px;
@@ -612,4 +618,182 @@ body {
   font-weight: bold;
   text-align: center;
 }
-/*# sourceMappingURL=assets/build/css/index.css.map */
+.wrap .why.container .inner a.try-button {
+  width: 240px;
+}
+.wrap .repetitors.container {
+  background-color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.wrap .repetitors.container .inner .items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap .repetitors.container .inner .items .item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  background-color: #eee;
+  transition: 0.5s all;
+}
+.wrap .repetitors.container .inner .items .item img {
+  filter: grayscale(100%);
+}
+.wrap .repetitors.container .inner .items .item:hover {
+  background-color: #98c5d8;
+}
+.wrap .repetitors.container .inner .items .item:hover img {
+  filter: none;
+}
+.wrap .repetitors.container .inner .items .item.reverse {
+  flex-direction: row-reverse;
+}
+.wrap .repetitors.container .inner .items .item .descr {
+  text-align: center;
+  width: 240px;
+  align-self: center;
+}
+.wrap .repetitors.container .inner .items .item .descr p:nth-of-type(1) {
+  font-weight: bold;
+}
+.wrap .price.container {
+  padding: 3rem 0 2rem 0;
+  background-color: #9fd7ee;
+}
+.wrap .price.container .inner .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrap .price.container .inner .wrap .item .img-wrap {
+  width: 80px;
+  height: 80px;
+  background-color: #C1272D;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+.wrap .price.container .inner .wrap .item .img-wrap img {
+  top: 5px;
+  left: 10px;
+  position: absolute;
+}
+.wrap .price.container .inner .wrap .item span {
+  display: block;
+}
+.wrap .price.container .inner .wrap .item span.label {
+  padding: 0.3rem;
+}
+.wrap .price.container .inner .wrap .item span.price-wrap {
+  color: #C1272D;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 3px solid #C1272D;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.wrap .price.container .inner .wrap .item span.price-wrap span.price {
+  position: relative;
+  top: 29px;
+  left: 14px;
+}
+.wrap .price.container .label {
+  background-color: #29abe2;
+}
+.wrap .price.container .label p {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.wrap .faq.container {
+  padding: 3rem 0 2rem 0;
+}
+.wrap .faq.container .inner .question-area ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrap .faq.container .inner .question-area ul li {
+  padding: 0.6rem;
+  font-size: 1rem;
+  text-transform: none;
+  width: 258px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.wrap .faq.container .inner .question-area ul li.active {
+  background-color: #ffac28;
+  display: inline-block;
+}
+.wrap .faq.container .inner .answer-area {
+  min-height: 50px;
+}
+.wrap .faq.container .inner .answer-area ul li {
+  list-style-type: none;
+}
+.wrap .faq.container .hidden {
+  display: none;
+}
+.wrap .form.container {
+  background-image: url(../../img/lead-bg-darken.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 2rem 0;
+}
+.wrap .form.container .inner h2 {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.wrap .form.container .inner form {
+  margin: 0 auto;
+  text-align: center;
+}
+.wrap .form.container .inner form input,
+.wrap .form.container .inner form select {
+  display: inline-block;
+  padding: 1rem;
+  width: 60%;
+  margin: 1rem 0;
+  box-sizing: content-box;
+}
+.wrap .form.container .inner form input[type="submit"] {
+  border: none;
+}
+.wrap .map.container {
+  position: relative;
+}
+.wrap .map.container .map-inner {
+  height: 400px;
+}
+.wrap .map.container .map-label {
+  background: #fff;
+  padding: 1em;
+  width: 396px;
+  box-shadow: 7px 7px 37px #999;
+  position: absolute;
+  top: 30%;
+  left: 20vw;
+}
+.wrap .map.container .map-label ul {
+  padding-left: 0;
+}
+.wrap .map.container .map-label ul li {
+  list-style-type: none;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.wrap .footer.container {
+  background-color: #334458;
+}
+.wrap .footer.container .inner {
+  color: #fff;
+}
+.wrap .footer.container .inner img.logo {
+  border: 3px solid #fff;
+}
+/*# sourceMappingURL=/new/assets/build/css/index.css.map */

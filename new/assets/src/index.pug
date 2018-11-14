@@ -257,7 +257,158 @@ html
 						.item
 							img.lazyload(data-src="assets/img/why/007.svg")
 							p Удобное расписание
+					a.try-button(href="#") Заказать звонок
+			.repetitors.container
+				.inner
+					h2 Наши основные репетиторы
+					.items
+						.item
+							img.lazyload(data-src="assets/img/preps/001.jpg")
+							.descr
+								p Александр Сергеевич ЛУЦЕВИЧ
+								p история Беларуси и обществоведение
+						.item
+							img.lazyload(data-src="assets/img/preps/002.jpg")
+							.descr
+								p Софья Геннадьевна ЛУЦЕВИЧ
+								p русский язык и литература
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/003.jpg")
+							.descr
+								p Владимир Сергеевич ХОДАКОВСКИЙ
+								p химия <br> биология
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/004.jpg")
+							.descr
+								p Полина Александровна ИВАНОВА
+								p белорусский <br> язык
+						.item
+							img.lazyload(data-src="assets/img/preps/005.jpg")
+							.descr
+								p Мария Ивановна ЛОБОДА
+								p математика
+						.item
+							img.lazyload(data-src="assets/img/preps/006.jpg")
+							.descr
+								p Светлана Ивановна ЛАПКО
+								p химия, физика
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/007.jpg")
+							.descr
+								p Анна Ивановна ШАБЛИНСКАЯ
+								p английский <br> язык
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/008.jpg")
+							.descr
+								p Вероника Витальевна ЛУКАШЕВИЧ
+								p немецкий, <br> русский язык
+						.item
+							img.lazyload(data-src="assets/img/preps/009.jpg")
+							.descr
+								p Ирина Александровная СИНЯВСКАЯ
+								p русский язык
+						.item
+							img.lazyload(data-src="assets/img/preps/010.jpg")
+							.descr
+								p Станислав Анатольевич ОЛИМПОВ
+								p география
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/011.jpg")
+							.descr
+								p Наталья Александровна СЕЛИВОНЧИК
+								p химия	
+						.item.reverse
+							img.lazyload(data-src="assets/img/preps/012.jpg")
+							.descr
+								p Игорь Иванович ЛАПКО
+								p математика
+						.item
+							img.lazyload(data-src="assets/img/preps/013.jpg")
+							.descr
+								p Ангелина Андреевна ЖИЗНЕВСКАЯ
+								p французский язык
+			.price.container
+				.inner
+					h2 Стоимость курса
+					h3 (за одно занятие 90 минут)
+					.wrap
+						.item
+							.img-wrap
+								img.lazyload(data-src="assets/img/book1.png")
+							span.label 1 предмет
+							span.price-wrap
+								span.price(style="left: 20px;") 14 р.
+						.item
+							.img-wrap
+								img.lazyload(data-src="assets/img/book2.png")
+							span.label 2 предмета
+							span.price-wrap
+								span.price 13,3 р.
+						.item
+							.img-wrap
+								img.lazyload(data-src="assets/img/book3.png")
+							span.label 3-4 предмета
+							span.price-wrap
+								span.price(style="left: 20px;")  13 р.
+				.label
+					p 10% - скидка при одновременной записи вдвоем
+			.faq.container
+				.inner
+					h2 Часто задаваемые вопросы
+					.question-area
+						ul
+							li.q1.active Сколько длится <br> курс обучения?
+							li.q2 Насколько эффективна подготовка?
+							li.q3 Как у вас проходит контроль знаний в процессе обучения?
+					.answer-area
+						ul
+							li.a1 Мы рекомендуем стандартный курс подготовки к ЦТ, который длится весь учебный год. Данный курс позволяет максимально подготовиться к тестам и поступить в выбранный университет.
+							li.a2 Всё зависит от мотивации и целей. Мы не обещаем, что легко и без труда можно подготовиться к ЦТ, лишь посещая курсы. Однако если старательно выполняться все задания преподавателя, то мы гарантируем в результате обучения баллы 80+
+							li.a3 Очень важно проводить мониторинг "роста" учеников. Наши репетиторы проводят диагностические тесты и тематические опросы. При отсутствии результатов - репетиторы заостряют внимание учеников и, в наиболее серьезных случаях, их родителей на сложившуюся ситуацию доя принятия мер.
+							li.a4 Да, каждые 1,5 часа у нас есть кофе-паузы. Ученики могут отдохнуть, выпить чай/кофе и подкрепиться печеньем, чтобы с новыми силами продолжить обучение.
+							li.a5 Подготовка к ЦТ проходит во второй половине будних дней, а также на протяжении выходных.
+							li.a6 Обычно курс состоит из 2 занятий по 90 минут в неделю.
+					.question-area
+						ul
+							li.q4 Есть ли у вас перерывы в течении занятий?
+							li.q5 Когда проходят <br> занятия?
+							li.q6 Сколько раз в неделю занятия?
+			.form.container
+				.inner
+					h2 Запишись на пробный урок
+					form
+						input(type="text" placeholder="Ваше имя" required="required")
+						input(type="text" placeholder="Ваш номер телефона" required="required")
+						p Выберите предмет
+						select
+							option Биология
+							option История Беларуси
+						input(type="submit")
+			.map.container
+				.map-inner.lazyload(data-script="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap")
+				.map-label
+						.wrap
+							h3 Фабрика знаний
+							ul
+								li <b>Адрес:</b> прт. Машерова, 10, оф. 302-304
+								li <b>Время работы:</b> каждый день, с 10:00 до 20:00
+								li <b>Почта:</b> podgotovka.ct@gmail.com
+								li <b>Телефон:</b> +375 29 618 80 90
+								li <b style="color:white">Телефон:</b> +375 33 617 80 90
+			.footer.container
+				.inner
+					.wrap
+						img.logo(src="assets/img/logo-fz.png")
+						p Профессиональная подготовка к ЦТ в Минске					
+
+
+
+
+
+
+
 
 		.script-area
 			script(src="assets/src/js/lazysizes.min.js" defer async)
 			script(src="assets/src/js/ls.unveilhooks.min.js" defer async)
+			script(src="assets/src/js/custom.js" defer async)

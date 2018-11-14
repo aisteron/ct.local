@@ -25,7 +25,9 @@ module.exports = function(grunt){
 			  production: {
 			    options: 
 				    {
-						paths: ['/new/assets/src/css'],
+						//paths: ['../assets/build/css'],
+						//paths: ['../'],
+						sourceMapURL:'/new/assets/build/css/index.css.map',
 						sourceMap:true,
 /*				      plugins: // временно отлючаю плагины, т.к. sourcemap не работает с ними.
 				      	[
