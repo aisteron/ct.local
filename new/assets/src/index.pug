@@ -20,24 +20,28 @@ html
 					p <span class="velcom"></span> +375 29 618 80 90
 					p <span class="mts"></span> +375 33 617 80 90
 					.social
-						span.viber
-						span.whatsapp
-						span.vk
-						span.insta
+						a(href="viber://chat?number=+375336178090" title="написать в вайбер")
+							span.viber
+						a(href="https://api.whatsapp.com/send?phone=375336178090" title="написать в вацап")
+							span.whatsapp
+						a(href="https://vk.me/id430947054" title="написать вконтакте")
+							span.vk
+						a(href="https://www.instagram.com/podgotovka_ct/" title="поставить лайки в инсте")
+							span.insta
 			.menu
 				ul
 					li
-						a(href="#") О курсах
+						a(href="#about") О курсах
 					li
-						a(href="#") Репетиторы
+						a(href="#team") Репетиторы
 					li
-						a(href="#") Стоимость
+						a(href="#price") Стоимость
 					li
-						a(href="#") Результаты
+						a(href="#results") Результаты
 					li
-						a(href="#") Отзывы
+						a(href="#testimonials") Отзывы
 					li
-						a(href="#") Контакты
+						a(href="#contacts") Контакты
 			.shock.container
 				.inner
 					img(src="assets/img/shock-8.png")
@@ -88,6 +92,7 @@ html
 							td
 			.command.container
 				.inner
+					a(name="about")
 					h2 Команда "Фабрики знаний" <br> это мы организовываем обучение
 					img.lazyload(data-src="assets/img/444.png")
 			.smi.container
@@ -166,6 +171,7 @@ html
 							td
 			.result.container
 				.inner
+					a(name="results")
 					h2 В результате, вы получите
 					ul
 						li Высокие баллы на ЦТ
@@ -174,6 +180,7 @@ html
 					img.lazyload(data-src="assets/img/345365.png")
 			.testimonials.container.lazyload(data-script="assets/src/js/swiper.min.js" data-link="assets/build/css/swiper.min.css")
 				.inner
+					a(name="testimonials")
 					h2 Отзывы
 					.swiper-container
 						.swiper-wrapper
@@ -260,6 +267,7 @@ html
 					a.try-button(href="#") Заказать звонок
 			.repetitors.container
 				.inner
+					a(name="team")
 					h2 Наши основные репетиторы
 					.items
 						.item
@@ -329,6 +337,7 @@ html
 								p французский язык
 			.price.container
 				.inner
+					a(name="price")
 					h2 Стоимость курса
 					h3 (за одно занятие 90 минут)
 					.wrap
@@ -373,7 +382,7 @@ html
 							li.q4 Есть ли у вас перерывы в течении занятий?
 							li.q5 Когда проходят <br> занятия?
 							li.q6 Сколько раз в неделю занятия?
-			.form.container
+			.form.container.lazyload(data-bg="assets/img/lead-bg-darken.jpg")
 				.inner
 					h2 Запишись на пробный урок
 					form
@@ -383,11 +392,22 @@ html
 						select
 							option Биология
 							option История Беларуси
+							option Физика
+							option Французский
+							option Математика
+							option Химия
+							option География
+							option Белорусский
+							option Обществоведение
+							option Английский
+							option Немецкий
+							option Русский
 						input(type="submit")
 			.map.container
 				.map-inner.lazyload(data-script="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap")
 				.map-label
 						.wrap
+							a(name="contacts")
 							h3 Фабрика знаний
 							ul
 								li <b>Адрес:</b> прт. Машерова, 10, оф. 302-304
@@ -399,7 +419,32 @@ html
 				.inner
 					.wrap
 						img.logo(src="assets/img/logo-fz.png")
-						p Профессиональная подготовка к ЦТ в Минске					
+						p Профессиональная подготовка <br>к ЦТ в Минске
+						div
+							p podgotovka.ct@gmail.com
+							p
+								a(href="#") Публичный договор
+						div
+							p +375 29 618 80 90
+							p +375 33 617 80 90
+						div.addr
+							p Время работы: 9.00-20.00
+							p.week
+								span пн
+								span вт
+								span ср
+								span чт
+								span пт
+								span сб
+								span вс
+							p.small г. Минск, проспект Машерова, 10, 3 этаж, кабинеты 302-304 станция метро "Площадь Победы"
+					p.credit 2018 "Фабрика Знаний". 
+					p.credit Частное унитарное предприятие по оказанию услуг "Фэктори-зет". Зарегистрировано 14 июля 2014 года Минским горисполкомом
+			.modal-area
+				.map-modal
+					.modal-container
+						span.close(title="закрыть окно") &times;
+						p zzz
 
 
 

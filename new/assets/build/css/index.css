@@ -63,28 +63,28 @@ body {
   display: block;
 }
 .wrap header .tel .social span.viber {
-  background: url(../../img/sprite/css_sprites.png) -102px -56px;
+  background: url(../../img/sprite/css_sprites2.png) -102px -56px;
 }
 .wrap header .tel .social span.whatsapp {
-  background: url(../../img/sprite/css_sprites.png) -102px -10px;
+  background: url(../../img/sprite/css_sprites2.png) -102px -10px;
 }
 .wrap header .tel .social span.vk {
-  background: url(../../img/sprite/css_sprites.png) -56px -56px;
+  background: url(../../img/sprite/css_sprites2.png) -56px -56px;
 }
 .wrap header .tel .social span.insta {
-  background: url(../../img/sprite/css_sprites.png) -10px -10px;
+  background: url(../../img/sprite/css_sprites2.png) -10px -10px;
 }
 .wrap header .tel span.velcom {
   width: 26px;
   height: 26px;
-  background: url(../../img/sprite/css_sprites.png) -10px -56px;
+  background: url(../../img/sprite/css_sprites2.png) -10px -56px;
   display: inline-block;
   vertical-align: middle;
 }
 .wrap header .tel span.mts {
   width: 26px;
   height: 26px;
-  background: url(../../img/sprite/css_sprites.png) -56px -10px;
+  background: url(../../img/sprite/css_sprites2.png) -56px -10px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -103,6 +103,7 @@ body {
   border-bottom: 2px solid #29ABE2;
   color: #C1272D;
   font-weight: 600;
+  transition: 0.3s all;
 }
 .wrap .menu ul li a:hover {
   border-bottom: 2px solid #C1272D;
@@ -207,6 +208,10 @@ body {
 }
 .wrap .command.container {
   padding-bottom: 3rem;
+}
+.wrap .command.container .inner img {
+  display: block;
+  margin: 0 auto;
 }
 .wrap .smi.container .inner .video {
   display: flex;
@@ -698,6 +703,7 @@ body {
   position: relative;
   top: 29px;
   left: 14px;
+  font-weight: bold;
 }
 .wrap .price.container .label {
   background-color: #29abe2;
@@ -709,7 +715,7 @@ body {
   padding: 1rem;
 }
 .wrap .faq.container {
-  padding: 3rem 0 2rem 0;
+  padding: 0 0 2rem 0;
 }
 .wrap .faq.container .inner .question-area ul {
   padding: 0;
@@ -739,7 +745,6 @@ body {
   display: none;
 }
 .wrap .form.container {
-  background-image: url(../../img/lead-bg-darken.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -779,10 +784,13 @@ body {
   top: 30%;
   left: 20vw;
 }
-.wrap .map.container .map-label ul {
+.wrap .map.container .map-label .wrap {
+  width: 100%;
+}
+.wrap .map.container .map-label .wrap ul {
   padding-left: 0;
 }
-.wrap .map.container .map-label ul li {
+.wrap .map.container .map-label .wrap ul li {
   list-style-type: none;
   line-height: 1.7;
   font-size: 0.9rem;
@@ -792,8 +800,89 @@ body {
 }
 .wrap .footer.container .inner {
   color: #fff;
+  font-size: 0.8rem;
+}
+.wrap .footer.container .inner a {
+  color: #fff;
 }
 .wrap .footer.container .inner img.logo {
   border: 3px solid #fff;
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+}
+.wrap .footer.container .inner .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+.wrap .footer.container .inner .wrap div.addr {
+  width: 250px;
+}
+.wrap .footer.container .inner .wrap div.addr p.small {
+  font-size: 0.7rem;
+}
+.wrap .footer.container .inner .wrap div.addr p.week span {
+  padding: 0.3rem;
+  background-color: #9fd7ee;
+  margin-right: 0.2rem;
+  display: inline-block;
+  border-radius: 2px;
+  color: #334458;
+}
+.wrap .footer.container .inner p.credit {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+}
+.wrap .footer.container .inner p.credit:nth-of-type {
+  padding-bottom: 0;
+}
+.wrap .modal-area .map-modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+.wrap .modal-area .map-modal .modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  position: relative;
+}
+.wrap .modal-area .map-modal .modal-container span.close {
+  color: #333;
+  padding: 0.35rem 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #333;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.wrap .modal-area .map-modal .modal-container span.close:hover {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=/new/assets/build/css/index.css.map */

@@ -56,4 +56,55 @@ function initMap()
 	});
 
 	marker.setMap(map)
-}        
+}
+
+
+/*скользим по якорям*/
+
+var navlinks = document.querySelectorAll('.menu ul li a');
+
+navlinks.forEach(function(e){
+
+	e.addEventListener('click', function(c){
+		c.preventDefault();
+		//console.log(this);
+
+		let href = this.getAttribute('href').replace('#','');
+
+		let name = document.querySelector('a[name="'+href+'"]');
+		if(name)
+		{
+			name.scrollIntoView({  behavior: 'smooth' });
+		} else 
+		{
+			console.log('не нашел якорь');
+		}
+		
+
+
+	});
+
+});  // .navlinks forEach
+
+/*
+*
+*
+*	MODAL WINDOWS
+*
+*/
+
+
+var map_modal = document.querySelector('.modal-area .map-modal');
+
+var header_map_link = document.querySelector('header a.map');
+var map_modal_close = document.querySelector('.map-modal span.close');
+
+header_map_link.onclick = function(e) {
+    e.preventDefault();
+    map_modal.style.display = "block";
+}
+
+map_modal_close.onclick = function(e) {
+    e.preventDefault();
+    map_modal.style.display = "none";
+}
