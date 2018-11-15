@@ -4,6 +4,7 @@ html
 		title test
 		link(rel="stylesheet" type="text/css" href="assets/build/css/index.css")
 		link(rel="shortcut icon" href="favicon.ico")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 	body
 		.wrap
 			header
@@ -57,39 +58,51 @@ html
 			.subjects.container
 				.inner
 					h2 Предметы, по которым мы готовим к ЦТ
-					table
-						tr
-							td 
-							td(style="background-color:#22B573") Биология
-							td
-							td(style="background-color:#01C6D9") История Беларуси
-							td
-							td(style="background-color:#C69C6D") Физика
-							td
-						tr
-							td(style="background-color:#334458") Французский
-							td
-							td(style="background-color:#FFC18E") Математика
-							td
-							td(style="background-color:#8CC63F") Химия
-							td
-							td(style="background-color:#29ABE2") География
-						tr
-							td
-							td(style="background-color:#D74C35") Белорусский
-							td
-							td(style="background-color:#4088AE") Обществоведение
-							td 
-							td(style="background-color:#FBB03B") Английский
-							td
-						tr
-							td
-							td
-							td(style="background-color:#C7B299") Немецкий
-							td
-							td(style="background-color:#B84B4B") Русский
-							td
-							td
+					.table
+						.row
+							div
+							div(style="background-color:#22B573") 
+								p Биология
+							div
+							div(style="background-color:#01C6D9") 
+								p История Беларуси
+							div
+							div(style="background-color:#C69C6D") 
+								p Физика
+							div
+						.row
+							div(style="background-color:#334458") 
+								p Французский
+							div
+							div(style="background-color:#FFC18E")
+								p Математика
+							div
+							div(style="background-color:#8CC63F")
+								p Химия
+							div
+							div(style="background-color:#29ABE2")
+								p География
+						.row
+							div
+							div(style="background-color:#D74C35")
+								p Белорусский
+							div
+							div(style="background-color:#4088AE")
+								p Общество <br> ведение
+							div 
+							div(style="background-color:#FBB03B")
+								p Английский
+							div
+						.row
+							div
+							div
+							div(style="background-color:#C7B299")
+								p Немецкий
+							div
+							div(style="background-color:#B84B4B")
+								p Русский
+							div
+							div
 			.command.container
 				.inner
 					a(name="about")
@@ -114,6 +127,7 @@ html
 			.steps.container
 				.inner
 					h2 Как стать нашим учеником
+					img.lazyload(data-src="assets/img/steps.jpg")
 					table
 						tr
 							td.step.left
@@ -424,7 +438,7 @@ html
 							p podgotovka.ct@gmail.com
 							p
 								a(href="#") Публичный договор
-						div
+						div.tells
 							p +375 29 618 80 90
 							p +375 33 617 80 90
 						div.addr
@@ -444,7 +458,7 @@ html
 				.map-modal
 					.modal-container
 						span.close(title="закрыть окно") &times;
-						p zzz
+						.map-container
 
 
 

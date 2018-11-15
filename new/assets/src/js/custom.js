@@ -55,7 +55,44 @@ function initMap()
     title:"Фабрика Знаний"
 	});
 
-	marker.setMap(map)
+	marker.setMap(map);
+
+	/*
+	*
+	*	create modal map
+	*/
+
+	var modal_center = {lat:53.912709, lng:27.576008}
+	var modal_map = new google.maps.Map(document.querySelector('.map-modal .map-container'), {
+		zoom: 15,
+		center: center,
+		disableDefaultUI: true
+	});
+
+	var modal_marker = new google.maps.Marker({
+    position: center,
+    title:"Фабрика Знаний"
+	});
+
+	modal_marker.setMap(modal_map);
+
+	/*подпись к маркеру*/
+
+	var contentString = '<div class="map-info-window">'+
+						'<h3>Фабрика знаний</h3>'
+						+'<p>прт. Машерова, 10, оф. 302 - 304</p>'
+						+'</div>';
+	var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+    modal_marker.addListener('click', function() {
+          infowindow.open(modal_map, modal_marker);
+        });    					
+
+
+
+
+
 }
 
 
@@ -99,12 +136,35 @@ var map_modal = document.querySelector('.modal-area .map-modal');
 var header_map_link = document.querySelector('header a.map');
 var map_modal_close = document.querySelector('.map-modal span.close');
 
+var not_open_yet = false;
+
 header_map_link.onclick = function(e) {
     e.preventDefault();
     map_modal.style.display = "block";
+    
+    if(!not_open_yet)
+    {
+		let script = document.createElement('script');
+		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap';
+		script.type = 'text/javascript';
+		document.body.parentNode.appendChild(script);
+		not_open_yet = true;
+    }
+
+
 }
 
 map_modal_close.onclick = function(e) {
     e.preventDefault();
     map_modal.style.display = "none";
 }
+
+
+/*
+*
+* load script by click in header
+*
+*/
+
+
+
