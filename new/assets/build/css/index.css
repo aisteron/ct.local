@@ -112,6 +112,11 @@ body {
     padding-right: 1rem;
   }
 }
+@media (max-width: 433px) {
+  .wrap header {
+    float: none;
+  }
+}
 .wrap .menu ul {
   display: flex;
   justify-content: space-between;
@@ -149,6 +154,11 @@ body {
   }
   .wrap .menu ul li {
     line-height: 2.5;
+  }
+}
+@media (max-width: 433px) {
+  .wrap .menu {
+    padding-top: 0rem;
   }
 }
 .wrap .container {
@@ -1085,7 +1095,7 @@ body {
   display: none;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2;
   /* Sit on top */
   left: 0;
   top: 0;
