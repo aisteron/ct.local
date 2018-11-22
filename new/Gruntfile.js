@@ -14,7 +14,7 @@ module.exports = function(grunt){
 			    },
 			    
 			    files: {
-			      'index.html':['assets/src/index.pug']
+			      'index.php':['assets/src/index.pug']
 			    },
 			    
 			  }
@@ -37,7 +37,9 @@ module.exports = function(grunt){
 				    },
 			    files: 
 				    {
-				      'assets/build/css/index.css': 'assets/src/css/index.less'
+				      'assets/build/css/index.css': 'assets/src/css/index.less',
+				      'assets/build/css/mobile-header.css': 'assets/src/css/mobile-header.less',
+				      'assets/build/css/desktop-header.css': 'assets/src/css/desktop-header.less'
 				     
 				    }
 			  }
@@ -80,7 +82,7 @@ module.exports = function(grunt){
 				},*/
 				pug:
 				{
-					files:['assets/src/*.pug'],
+					files:['assets/src/*.pug', 'assets/src/includes/*.pug'],
 					tasks:['pug'],
 					options: {
 				      livereload: true,
@@ -98,7 +100,7 @@ module.exports = function(grunt){
 	            dev: {
 	                bsFiles: {
 	                    src : [
-                        'assets/build/css/index.css',
+                        'assets/build/css/*.css',
                         'index.html'
                     ]
 	                },

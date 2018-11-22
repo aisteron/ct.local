@@ -1,0 +1,209 @@
+.wrap header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  align-items: center;
+}
+.wrap header span.slogan {
+  flex-grow: 1;
+  padding-left: 1.5rem;
+}
+.wrap header img {
+  width: 86px;
+  height: 86px;
+}
+.wrap header p {
+  margin: 0;
+}
+.wrap header .address,
+.wrap header .tel {
+  color: #C1272D;
+}
+.wrap header .address {
+  padding-right: 2rem;
+}
+.wrap header .address p {
+  font-size: 0.8rem;
+}
+.wrap header .address a.map {
+  padding: 0.3rem 0;
+  color: red;
+  display: inline-block;
+}
+.wrap header .tel {
+  font-size: 0.9rem;
+}
+.wrap header .tel p:nth-of-type(1) {
+  padding-bottom: 0.1rem;
+}
+.wrap header .tel .social {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.3rem;
+}
+.wrap header .tel .social span {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+.wrap header .tel .social span.viber {
+  background: url(assets/img/sprite/css_sprites2.png) -102px -56px;
+}
+.wrap header .tel .social span.whatsapp {
+  background: url(assets/img/sprite/css_sprites2.png) -102px -10px;
+}
+.wrap header .tel .social span.vk {
+  background: url(assets/img/sprite/css_sprites2.png) -56px -56px;
+}
+.wrap header .tel .social span.insta {
+  background: url(assets/img/sprite/css_sprites2.png) -10px -10px;
+}
+.wrap header .tel span.velcom {
+  width: 26px;
+  height: 26px;
+  background: url(assets/img/sprite/css_sprites2.png) -10px -56px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrap header .tel span.mts {
+  width: 26px;
+  height: 26px;
+  background: url(assets/img/sprite/css_sprites2.png) -56px -10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: 990px) {
+  .wrap header {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .wrap header {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 2;
+  }
+  .wrap header span.slogan {
+    display: block;
+    padding: 1rem 0;
+  }
+  .wrap header .tel .social {
+    display: block;
+  }
+  .wrap header .tel .social a {
+    display: inline-block;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 433px) {
+  .wrap header {
+    float: none;
+  }
+}
+.wrap .menu ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.wrap .menu ul li {
+  list-style-type: none;
+}
+.wrap .menu ul li a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid #29ABE2;
+  color: #C1272D;
+  font-weight: 600;
+  transition: 0.3s all;
+}
+.wrap .menu ul li a:hover {
+  border-bottom: 2px solid #C1272D;
+  color: #29ABE2;
+}
+@media (max-width: 990px) {
+  .wrap .menu {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .wrap .menu {
+    position: relative;
+    z-index: 2;
+    padding-top: 5rem;
+  }
+  .wrap .menu ul {
+    display: inherit;
+  }
+  .wrap .menu ul li {
+    line-height: 2.5;
+  }
+}
+@media (max-width: 433px) {
+  .wrap .menu {
+    padding-top: 0rem;
+  }
+}
+.wrap .shock.container {
+  padding-bottom: 1em;
+  background: #feffff;
+  background: -moz-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background: -webkit-linear-gradient(top, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background: linear-gradient(to bottom, #feffff 0%, #7fccdd 37%, #a0d8ef 100%);
+  background-repeat: no-repeat;
+}
+.wrap .shock.container .inner img {
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .wrap .shock.container .inner img {
+    width: 92%;
+  }
+}
+.wrap .shock.container .inner .label {
+  background-color: #ffac28;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw);
+  margin-top: -270px;
+  padding: 1em 0;
+}
+@media (max-width: 500px) {
+  .wrap .shock.container .inner .label {
+    background-color: #ffac28c2;
+  }
+}
+.wrap .shock.container .inner .label p {
+  color: #C1272D;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 80%;
+}
+@media (max-width: 500px) {
+  .wrap .shock.container .inner .label p {
+    font-size: inherit;
+    font-weight: normal;
+    padding: 0rem 0.5rem;
+    line-height: 1.3rem;
+  }
+}
+.wrap .shock.container .inner .desc {
+  width: 960px;
+  margin: 0 auto;
+}
+.wrap .shock.container .inner .desc p {
+  text-align: justify;
+  padding: 0 1rem;
+}
+@media (max-width: 960px) {
+  .wrap .shock.container .inner .desc {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=/new/assets/build/css/index.css.map */

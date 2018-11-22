@@ -1,60 +1,29 @@
+|<?php require_once 'assets/src/Mobile_Detect.php'; $detect = new Mobile_Detect;?>
 doctype html
 html
 	head
 		title test
-		link(rel="stylesheet" type="text/css" href="assets/build/css/index.css")
 		link(rel="shortcut icon" href="favicon.ico")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		|<?php if ($detect->isMobile()) {
+		|   echo '<style rel="critical-mobile">';
+		|   echo file_get_contents('assets/build/css/mobile-header.css');
+		|   echo '</style>';
+		| } else {
+		|   echo '<style rel="critical-desktop">';
+		|   echo file_get_contents('assets/build/css/desktop-header.css');
+		|   echo '</style>';
+		| } ?>
+		//link(rel="stylesheet" href="assets/build/css/index.css")
+
 	body
 		.wrap
-			header
-				img(src="assets/img/logo-fz.png")
-				span.slogan Профессиональная <br>подготовка к ЦТ в Минске
-				
-				.address
-					p г. Минск, ул.Машерова, 10
-					p ст. м. "Площадь Победы"
-					p 
-						a.map(href="#") карта
-					p Пишите нам:
-				.tel
-					p <span class="velcom"></span> +375 29 618 80 90
-					p <span class="mts"></span> +375 33 617 80 90
-					.social
-						a(href="viber://chat?number=+375336178090" title="написать в вайбер")
-							span.viber
-						a(href="https://api.whatsapp.com/send?phone=375336178090" title="написать в вацап")
-							span.whatsapp
-						a(href="https://vk.me/id430947054" title="написать вконтакте")
-							span.vk
-						a(href="https://www.instagram.com/podgotovka_ct/" title="поставить лайки в инсте")
-							span.insta
-			.menu
-				ul
-					li
-						a(href="#about") О курсах
-					li
-						a(href="#team") Репетиторы
-					li
-						a(href="#price") Стоимость
-					li
-						a(href="#results") Результаты
-					li
-						a(href="#testimonials") Отзывы
-					li
-						a(href="#contacts") Контакты
-			.shock.container
-				.inner
-					img(src="assets/img/shock-8.png")
-					.label
-						p Хочешь максимально подготовиться к ЦТ?
-						p НЕ ПАНИКУЙ!
-						p Запишись на пробный бесплатный урок!
-					a.try-button(href="#") Попробовать!
-					.desc
-						p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний. Мы заметили, что на курсах с отсутствием контроля знаний - результаты учеников намного меньше. 
+			|<?php if ($detect->isMobile()): ?>
+			include includes/mobile-header.pug
+			|<?php else: ?>
+			include includes/desktop-header.pug
+			|<?php endif;?>
 
-						p Поэтому решили совместить интересную подачу материала с постоянным мониторингом результатов наших учеников. При должном выполнении программы обучения - результаты у абитуриентов от 80 баллов гарантированы. Однако, процесс образования взаимен! Поэтому мы не обещаем золотых гор. Придётся поработать вместе!
 			.subjects.container
 				.inner
 					h2 Предметы, по которым мы готовим к ЦТ
@@ -89,7 +58,7 @@ html
 							div
 							div(style="background-color:#4088AE")
 								p Общество <br> ведение
-							div 
+							div
 							div(style="background-color:#FBB03B")
 								p Английский
 							div
