@@ -741,6 +741,7 @@
 					width:480px;
 					background-color: #eee;
 					transition: 0.5s all;
+					cursor: pointer;
 
 					img 
 					{
@@ -813,6 +814,7 @@
 				{
 					padding-left:1rem;
 					padding-bottom:1rem;
+
 
 					&:nth-of-type(3)
 					{
@@ -898,7 +900,7 @@
 				    }
 					li 
 					{
-						&:extend(.wrap .shock.container .inner a.try-button);
+						&:extend(body a.try-button);
 						//display: inline-block;
 						padding: 0.6rem;
 						font-size: 1rem;
@@ -906,6 +908,7 @@
 						width: 258px;
 					    margin: 0.5rem;
 					    cursor: pointer;
+					    list-style-type: none;
 
 					    &.active
 					    {
@@ -955,14 +958,14 @@
 				{
 					display: inline-block;
 					padding:1rem;
-					width:60%;
+					width:80%;
 					margin:1rem 0;
 					box-sizing:content-box;
 				}
 
 				input[type="submit"]
 				{
-					&:extend(.wrap .shock.container .inner a.try-button);
+					&:extend(body a.try-button);
 					border:none;
 				}
 
@@ -1160,11 +1163,100 @@
 				{
 					height:400px;
 					position: relative;
-					z-index:3;
+					z-index:10;
 				}
 			}
+		} //.map-modal
+
+		.zapis-modal
+		{
+			display:none;
+			position: fixed; /* Stay in place */
+			z-index: 2; /* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+			.modal-container
+			{
+				background-color: #fefefe;
+				margin: 15% auto; /* 15% from the top and centered */
+				//padding: 2rem;
+				//border: 1px solid #888;
+				width: 400px;
+				position: relative;
+			    border-radius: 10px 10px 0 0;
+			}
+
+			.modal-header
+			{
+				background-color:@dark-blue;
+				color:#fff;
+		        border-radius: 10px 10px 0 0;
+				padding: 0.7rem;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+
+				span.close
+				{
+					cursor:pointer;
+				}
+			}
+
+			.modal-content
+			{
+				padding:0.5rem;
+
+				input, select
+				{
+					display: block;
+					padding:1rem;
+					width:100%;
+				    -webkit-box-sizing: border-box;
+			       -moz-box-sizing: border-box;
+			            box-sizing: border-box;
+					margin:0.3rem;
+
+				}
+
+				input[type="submit"]
+				{
+					display: inline;
+					width: 150px;
+					border:none;
+					background-color:@dark-blue;
+					color:#fff;
+					border-radius:0.3rem;
+					cursor: pointer;
+				}
+			}
+		} // .zapis-modal
+
+		.zakaz-modal
+		{
+			&:extend(.wrap .modal-area .zapis-modal);
+
+			.modal-container
+			{
+				&:extend(.wrap .modal-area .zapis-modal .modal-container);
+			}
+
+			.modal-header
+			{
+				&:extend(.wrap .modal-area .zapis-modal .modal-header all);
+			}
+			.modal-content
+			{
+				&:extend(.wrap .modal-area .zapis-modal .modal-content all);
+			}
+
 		}
-	}
+	}// .modal-area	
 
 
 

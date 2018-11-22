@@ -259,6 +259,55 @@ if(document.querySelector('header a.map'))
 
 }
 
+/*
+*
+*	Модальное окно "Записаться на пробное занятие"
+*/
+
+if(document.querySelector('.try-button'))
+{
+	let zapis_modal = document.querySelector('.modal-area .zapis-modal');
+	let open_button = document.querySelector('.shock .try-button');
+	let close_button = document.querySelector('.zapis-modal span.close');
+
+	open_button.onclick = function(e) {
+		e.preventDefault();
+	    zapis_modal.style.display = "block";
+	}
+
+	close_button.onclick = function(e) {
+		e.preventDefault();
+	    zapis_modal.style.display = "none";
+	}
+
+
+}
+
+/*
+*
+*	Модальное окно "Заказать звонок"
+*
+*/
+
+if(document.querySelector('.why'))
+{
+	let zakaz_modal = document.querySelector('.modal-area .zakaz-modal');
+	let open_button = document.querySelector('.why .try-button');
+	let close_button = document.querySelector('.zakaz-modal span.close');
+
+	open_button.onclick = function(e) {
+		e.preventDefault();
+	    zakaz_modal.style.display = "block";
+	}
+
+	close_button.onclick = function(e) {
+		e.preventDefault();
+	    zakaz_modal.style.display = "none";
+	}
+
+
+}
+
 
 // анимация крестика и открытие меню в мобильном меню
 if(document.querySelector('header .nav-bar'))
@@ -278,5 +327,41 @@ if(document.querySelector('header .nav-bar'))
 	});
 }
 
+// ссылки на отдельные лендинги преподавателей
 
+document.querySelectorAll('.repetitors .items .item').forEach(function(e){
+	e.addEventListener('click', function(){
+		window.location.href = e.querySelector('.descr').getAttribute('data-link');
+		//console.log(el);
+	});
+})
+
+
+// отравка данных с модальных форм
+
+function zapis_modal()
+{
+	//console.log('hi');
+	xhr = new XMLHttpRequest();
+
+	var phone = encodeURIComponent(document.querySelector('.zapis-modal input[name="ori"]').value);
+	var subject =document.querySelector('.zapis-modal select');
+		subject = subject.options[subject.selectedIndex].text;
+    	subject = encodeURIComponent(subject);
+
+	var body = 'phone=' + phone + '&subject=' +subject + '&type=zapis';
+
+	xhr.open('POST', 'assets/src/send.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+	    if (xhr.status === 200) {
+	        //alert('Something went wrong.  Name is now ' + xhr.responseText);
+	        console.log(xhr.responseText);
+	    }
+	    else if (xhr.status !== 200) {
+	        alert('Request failed.  Returned status of ' + xhr.status);
+	    }
+	};
+	xhr.send(body);
+}
 

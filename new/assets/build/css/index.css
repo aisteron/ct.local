@@ -47,7 +47,9 @@ body .wrap h2 {
     padding-left: 1rem;
   }
 }
-body a.try-button {
+body a.try-button,
+.wrap .faq.container .inner .question-area ul li,
+.wrap .form.container .inner form input[type="submit"] {
   padding: 1em;
   color: #fff;
   background-color: #C1272D;
@@ -596,6 +598,7 @@ body a.try-button:hover {
   width: 480px;
   background-color: #eee;
   transition: 0.5s all;
+  cursor: pointer;
 }
 .wrap .repetitors.container .inner .items .item img {
   filter: grayscale(100%);
@@ -718,6 +721,7 @@ body a.try-button:hover {
   width: 258px;
   margin: 0.5rem;
   cursor: pointer;
+  list-style-type: none;
 }
 .wrap .faq.container .inner .question-area ul li.active {
   background-color: #ffac28;
@@ -750,7 +754,7 @@ body a.try-button:hover {
 .wrap .form.container .inner form select {
   display: inline-block;
   padding: 1rem;
-  width: 60%;
+  width: 80%;
   margin: 1rem 0;
   box-sizing: content-box;
 }
@@ -927,6 +931,75 @@ body a.try-button:hover {
 .wrap .modal-area .map-modal .modal-container .map-container {
   height: 400px;
   position: relative;
-  z-index: 3;
+  z-index: 10;
+}
+.wrap .modal-area .zapis-modal,
+.wrap .modal-area .zakaz-modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+.wrap .modal-area .zapis-modal .modal-container,
+.wrap .modal-area .zakaz-modal .modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  width: 400px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+.wrap .modal-area .zapis-modal .modal-header,
+.wrap .modal-area .zakaz-modal .modal-header {
+  background-color: #334458;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.wrap .modal-area .zapis-modal .modal-header span.close,
+.wrap .modal-area .zakaz-modal .modal-header span.close {
+  cursor: pointer;
+}
+.wrap .modal-area .zapis-modal .modal-content,
+.wrap .modal-area .zakaz-modal .modal-content {
+  padding: 0.5rem;
+}
+.wrap .modal-area .zapis-modal .modal-content input,
+.wrap .modal-area .zapis-modal .modal-content select,
+.wrap .modal-area .zakaz-modal .modal-content input,
+.wrap .modal-area .zakaz-modal .modal-content select {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.3rem;
+}
+.wrap .modal-area .zapis-modal .modal-content input[type="submit"],
+.wrap .modal-area .zakaz-modal .modal-content input[type="submit"] {
+  display: inline;
+  width: 150px;
+  border: none;
+  background-color: #334458;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=/new/assets/build/css/index.css.map */

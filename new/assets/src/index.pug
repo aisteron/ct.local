@@ -255,67 +255,67 @@ html
 					.items
 						.item
 							img.lazyload(data-src="assets/img/preps/001.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/lutsevich.html")
 								p Александр Сергеевич ЛУЦЕВИЧ
 								p история Беларуси и обществоведение
 						.item
 							img.lazyload(data-src="assets/img/preps/002.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/sergeeva.html")
 								p Софья Геннадьевна ЛУЦЕВИЧ
 								p русский язык и литература
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/003.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/hodakovsky.html")
 								p Владимир Сергеевич ХОДАКОВСКИЙ
 								p химия <br> биология
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/004.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/ivanova.html")
 								p Полина Александровна ИВАНОВА
 								p белорусский <br> язык
 						.item
 							img.lazyload(data-src="assets/img/preps/005.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/loboda.html")
 								p Мария Ивановна ЛОБОДА
 								p математика
 						.item
 							img.lazyload(data-src="assets/img/preps/006.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/lapko-svetlana.html")
 								p Светлана Ивановна ЛАПКО
 								p химия, физика
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/007.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/shablinskaya.html")
 								p Анна Ивановна ШАБЛИНСКАЯ
 								p английский <br> язык
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/008.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/lykashevich.html")
 								p Вероника Витальевна ЛУКАШЕВИЧ
 								p немецкий, <br> русский язык
 						.item
 							img.lazyload(data-src="assets/img/preps/009.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/siniavskaya.html")
 								p Ирина Александровная СИНЯВСКАЯ
 								p русский язык
 						.item
 							img.lazyload(data-src="assets/img/preps/010.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/olimpov.html")
 								p Станислав Анатольевич ОЛИМПОВ
 								p география
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/011.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/selivonchik.html")
 								p Наталья Александровна СЕЛИВОНЧИК
 								p химия	
 						.item.reverse
 							img.lazyload(data-src="assets/img/preps/012.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/lapko-igor.html")
 								p Игорь Иванович ЛАПКО
 								p математика
 						.item
 							img.lazyload(data-src="assets/img/preps/013.jpg")
-							.descr
+							.descr(data-link="http://ct.fzn.by/giznevskaya.html")
 								p Ангелина Андреевна ЖИЗНЕВСКАЯ
 								p французский язык
 			.price.container
@@ -371,8 +371,9 @@ html
 					form
 						input(type="text" placeholder="Ваше имя" required="required")
 						input(type="text" placeholder="Ваш номер телефона" required="required")
-						p Выберите предмет
+						p Выберите предмет:
 						select
+							option Русский язык
 							option Биология
 							option История Беларуси
 							option Физика
@@ -384,8 +385,21 @@ html
 							option Обществоведение
 							option Английский
 							option Немецкий
-							option Русский
-						input(type="submit")
+						select
+							option(selected default) Выберите второй предмет (по желанию)
+							option Русский язык	
+							option Биология
+							option История Беларуси
+							option Физика
+							option Французский
+							option Математика
+							option Химия
+							option География
+							option Белорусский
+							option Обществоведение
+							option Английский
+							option Немецкий		
+						input(type="submit" value="Отправить")
 			.map.container
 				.map-inner.lazyload(data-script="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap")
 				.map-label
@@ -428,6 +442,43 @@ html
 					.modal-container
 						span.close(title="закрыть окно") &times;
 						.map-container
+				
+				// кнопка записаться в верхней части лендинга
+				.zapis-modal
+					.modal-container
+						.modal-header
+							span.close(title="закрыть окно") &times;
+							span.title Пробное занятие
+						.modal-content
+							p Чтобы записаться на <b>БЕСПЛАТНОЕ</b> пробное занятие, пожалуйста, оставьте, свой номер телефона и мы вам перезвоним
+							form(method="post" action="assets/src/send.php" onsubmit="zapis_modal();return false")
+								input(type="text" placeholder="+375 29 000 00 00" required="required" name="ori")
+								select
+									option Русский язык
+									option Биология
+									option История Беларуси
+									option Физика
+									option Французский
+									option Математика
+									option Химия
+									option География
+									option Белорусский
+									option Обществоведение
+									option Английский
+									option Немецкий
+								input(type="submit" value="Отправить")
+				.zakaz-modal
+					.modal-container
+						.modal-header
+							span.close(title="закрыть окно") &times;
+							span.title Заказ обратного звонка
+						.modal-content
+							p Пожалуйста, оставьте, свой номер телефона и мы вам перезвоним
+							form
+								input(type="text" placeholder="+375 29 000 00 00" required="required")
+								input(type="submit" value="Отправить")
+
+							
 
 
 
