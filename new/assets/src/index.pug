@@ -368,9 +368,9 @@ html
 			.form.container.lazyload(data-bg="assets/img/lead-bg-darken.jpg")
 				.inner
 					h2 Запишись на пробный урок
-					form
-						input(type="text" placeholder="Ваше имя" required="required")
-						input(type="text" placeholder="Ваш номер телефона" required="required")
+					form(method="post" action="assets/src/send.php" onsubmit="proba_form();return false")
+						input(type="text" placeholder="Ваше имя" required="required" name="userName")
+						input(type="text" placeholder="Ваш номер телефона" required="required" name="userPhone")
 						p Выберите предмет:
 						select
 							option Русский язык
@@ -400,6 +400,7 @@ html
 							option Английский
 							option Немецкий		
 						input(type="submit" value="Отправить")
+						.result
 			.map.container
 				.map-inner.lazyload(data-script="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap")
 				.map-label
@@ -467,6 +468,7 @@ html
 									option Английский
 									option Немецкий
 								input(type="submit" value="Отправить")
+				// кнопка заказать обратный звонок					
 				.zakaz-modal
 					.modal-container
 						.modal-header
@@ -474,8 +476,8 @@ html
 							span.title Заказ обратного звонка
 						.modal-content
 							p Пожалуйста, оставьте, свой номер телефона и мы вам перезвоним
-							form
-								input(type="text" placeholder="+375 29 000 00 00" required="required")
+							form(method="post" action="assets/src/send.php" onsubmit="zakaz_modal(); return false")
+								input(type="text" placeholder="+375 29 000 00 00" required="required" name="phone")
 								input(type="submit" value="Отправить")
 
 							

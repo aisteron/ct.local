@@ -47,6 +47,11 @@ body .wrap h2 {
     padding-left: 1rem;
   }
 }
+body .wrap .lazyloading {
+  background-image: url(../../img/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 body a.try-button,
 .wrap .faq.container .inner .question-area ul li,
 .wrap .form.container .inner form input[type="submit"] {
@@ -1001,5 +1006,15 @@ body a.try-button:hover {
   color: #fff;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+.wrap .modal-area .zapis-modal .modal-content .result,
+.wrap .modal-area .zakaz-modal .modal-content .result {
+  text-align: center;
+}
+.wrap .modal-area .zapis-modal .modal-content .result .mark,
+.wrap .modal-area .zakaz-modal .modal-content .result .mark {
+  color: #8CC63F;
+  font-size: 2.5rem;
+  margin: 0;
 }
 /*# sourceMappingURL=/new/assets/build/css/index.css.map */

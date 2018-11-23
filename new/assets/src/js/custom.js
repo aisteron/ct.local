@@ -357,6 +357,25 @@ function zapis_modal()
 	    if (xhr.status === 200) {
 	        //alert('Something went wrong.  Name is now ' + xhr.responseText);
 	        console.log(xhr.responseText);
+
+	        if(xhr.responseText == 'ok')
+	        {
+	        	document.querySelector('.zapis-modal .modal-content').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="mark">✔</p>'
+	        		+'<p>Успешно отправлено</p>'
+	        		+'<p><small>Пожалуйста, ожидайте звонка менеджера</small></p>'
+	        		+'</div>';
+	        		yaCounter50071654.reachGoal('form');
+	        } else if(xhr.responseText == 'error')
+	        {
+	        	document.querySelector('.zapis-modal .modal-content').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="error">✘</p>'
+	        		+'<p>Ошибка отправки</p>'
+	        		+'<p><small>Пожалуйста, сообщите нам об этом по тел.: +375 29 618 80 90</small></p>'
+	        		+'</div>';
+	        }
 	    }
 	    else if (xhr.status !== 200) {
 	        alert('Request failed.  Returned status of ' + xhr.status);
@@ -365,3 +384,123 @@ function zapis_modal()
 	xhr.send(body);
 }
 
+function zakaz_modal()
+{
+	xhr = new XMLHttpRequest();
+
+	var phone = encodeURIComponent(document.querySelector('.zakaz-modal input[name="phone"]').value);
+
+	var body = 'phone=' + phone + '&type=zakaz';
+
+	xhr.open('POST', 'assets/src/send.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+	    if (xhr.status === 200) {
+	        //alert('Something went wrong.  Name is now ' + xhr.responseText);
+	        console.log(xhr.responseText);
+
+	        if(xhr.responseText == 'ok')
+	        {
+	        	document.querySelector('.zakaz-modal .modal-content').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="mark">✔</p>'
+	        		+'<p>Успешно отправлено</p>'
+	        		+'<p><small>Пожалуйста, ожидайте звонка менеджера</small></p>'
+	        		+'</div>';
+	        		yaCounter50071654.reachGoal('form');
+	        } else if(xhr.responseText == 'error')
+	        {
+	        	document.querySelector('.zakaz-modal .modal-content').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="error">✘</p>'
+	        		+'<p>Ошибка отправки</p>'
+	        		+'<p><small>Пожалуйста, сообщите нам об этом по тел.: +375 29 618 80 90</small></p>'
+	        		+'</div>';
+	        }
+	    }
+	    else if (xhr.status !== 200) {
+	        alert('Request failed.  Returned status of ' + xhr.status);
+	    }
+	};
+	xhr.send(body);
+
+}
+
+function proba_form()
+{
+	
+
+	var userName = encodeURIComponent(document.querySelector('.form.container input[name="userName"]').value);
+	var userPhone = encodeURIComponent(document.querySelector('.form.container input[name="userPhone"]').value);
+
+	var subject1 = document.querySelectorAll('.form.container select')[0];
+		subject1 = subject1.options[subject1.selectedIndex].text;
+    	subject1 = encodeURIComponent(subject1);
+
+    var selected_subject2 = document.querySelectorAll('.form.container select')[1];
+		selected_subject2 = selected_subject2.options[selected_subject2.selectedIndex].hasAttribute('default');
+
+	if(!selected_subject2)
+	{
+		var subject2 = document.querySelectorAll('.form.container select')[1];
+		subject2 = subject2.options[subject2.selectedIndex].text;
+    	subject2 = encodeURIComponent(subject2);
+
+    	var body = 'phone=' + userPhone + '&name=' + userName + '&subject1=' +subject1 + '&subject2=' +subject2 + '&type=proba';
+		
+	}
+	else 
+	{
+
+		var body = 'phone=' + userPhone + '&name=' + userName + '&subject1=' +subject1 + '&type=proba';		
+	}
+
+	xhr = new XMLHttpRequest();
+
+	xhr.open('POST', 'assets/src/send.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+	    if (xhr.status === 200) {
+	        //alert('Something went wrong.  Name is now ' + xhr.responseText);
+	        console.log(xhr.responseText);
+
+	        if(xhr.responseText == 'ok')
+	        {
+	        	document.querySelector('.form.container .result').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="mark">✔</p>'
+	        		+'<p>Успешно отправлено</p>'
+	        		+'<p><small>Пожалуйста, ожидайте звонка менеджера</small></p>'
+	        		+'</div>';
+	        	yaCounter50071654.reachGoal('form');	
+
+	        	document.querySelector('.form.container input[name="userName"]').value = '';	
+	        	document.querySelector('.form.container input[name="userPhone"]').value = '';	
+	        } else if(xhr.responseText == 'error')
+	        {
+	        	document.querySelector('.form.container .result').innerHTML =
+	        		'<div class="result">' 
+	        		+'<p class="error">✘</p>'
+	        		+'<p>Ошибка отправки</p>'
+	        		+'<p><small>Пожалуйста, сообщите нам об этом по тел.: +375 29 618 80 90</small></p>'
+	        		+'</div>';
+	        }
+	    }
+	    else if (xhr.status !== 200) {
+	        alert('Request failed.  Returned status of ' + xhr.status);
+	    }
+	};
+	xhr.send(body);
+
+
+	
+} // proba_form()
+
+/*
+*
+*
+* Зафигачим яндекс-метрику
+*
+*/
+
+(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50071654 = new Ya.Metrika2({ id:50071654, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");
