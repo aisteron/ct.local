@@ -763,8 +763,29 @@ body a.try-button:hover {
   margin: 1rem 0;
   box-sizing: content-box;
 }
+.wrap .form.container .inner form select {
+  width: calc(80% - 4.8rem);
+}
 .wrap .form.container .inner form input[type="submit"] {
   border: none;
+}
+.wrap .form.container .inner form a.add,
+.wrap .form.container .inner form a.remove {
+  background: #c1272d;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: 0.5s all;
+}
+.wrap .form.container .inner form a.add:hover,
+.wrap .form.container .inner form a.remove:hover {
+  background: #ffac28;
+}
+.wrap .form.container .inner form a.remove {
+  background-color: #9fd7ee;
+  padding: 1.1rem;
 }
 .wrap .map.container {
   position: relative;

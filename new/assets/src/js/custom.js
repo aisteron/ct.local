@@ -428,32 +428,10 @@ function zakaz_modal()
 
 function proba_form()
 {
-	
+
 
 	var userName = encodeURIComponent(document.querySelector('.form.container input[name="userName"]').value);
 	var userPhone = encodeURIComponent(document.querySelector('.form.container input[name="userPhone"]').value);
-
-	var subject1 = document.querySelectorAll('.form.container select')[0];
-		subject1 = subject1.options[subject1.selectedIndex].text;
-    	subject1 = encodeURIComponent(subject1);
-
-    var selected_subject2 = document.querySelectorAll('.form.container select')[1];
-		selected_subject2 = selected_subject2.options[selected_subject2.selectedIndex].hasAttribute('default');
-
-	if(!selected_subject2)
-	{
-		var subject2 = document.querySelectorAll('.form.container select')[1];
-		subject2 = subject2.options[subject2.selectedIndex].text;
-    	subject2 = encodeURIComponent(subject2);
-
-    	var body = 'phone=' + userPhone + '&name=' + userName + '&subject1=' +subject1 + '&subject2=' +subject2 + '&type=proba';
-		
-	}
-	else 
-	{
-
-		var body = 'phone=' + userPhone + '&name=' + userName + '&subject1=' +subject1 + '&type=proba';		
-	}
 
 	xhr = new XMLHttpRequest();
 
@@ -490,7 +468,30 @@ function proba_form()
 	        alert('Request failed.  Returned status of ' + xhr.status);
 	    }
 	};
-	xhr.send(body);
+
+	var subject0 = document.querySelector('.form.container form select.initialSelect');
+		subject0 = subject0.options[subject0.selectedIndex].text;
+	
+	var object = 
+	{
+		name:userName,
+		phone:userPhone,
+		subject0:subject0
+	}
+
+	document.querySelectorAll('.form.container form select[class^="off"]').forEach(function(e, index){
+
+		index++;
+
+		let selected = e.options[e.selectedIndex].hasAttribute('default');
+		if(!selected)
+		{
+			object['subject'+index] = e.options[e.selectedIndex].text;
+		}
+	})
+
+	//console.log(object);
+	xhr.send(JSON.stringify(object));
 
 
 	
@@ -504,3 +505,74 @@ function proba_form()
 */
 
 (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50071654 = new Ya.Metrika2({ id:50071654, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");
+
+
+/*
+*
+*
+*	Добавляем предметы в футер лидформу
+*/
+
+var add_button = document.querySelector('.form.container form a.add');
+add_button.addEventListener('click', function(e){
+	e.preventDefault();
+	let string5 = ''+
+		'<select class="off5">'
+		+ '<option selected default>Добавить предмет (-5% скидка)</option>'
+		+ '<option>Русский язык</option>'
+		+ '<option>Биология</option>'
+		+ '<option>История Беларуси</option>'
+		+ '<option>Физика</option>'
+		+ '<option>Французский</option>'
+		+ '<option>Математика</option>'
+		+ '<option>Химия</option>'
+		+ '<option>География</option>'
+		+ '<option>Белорусский</option>'
+		+ '<option>Обществоведение</option>'
+		+ '<option>Английский</option>'
+		+ '<option>Немецкий</option>'
+		+ '</select>'
+		+ '<a class="remove" href="#">-</a>'
+	;
+	if(document.querySelector('select.off5'))
+	{
+		let string10 = ''+
+		'<select class="off10">'
+		+ '<option selected default>Добавить предмет (-10% скидка)</option>'
+		+ '<option>Русский язык</option>'
+		+ '<option>Биология</option>'
+		+ '<option>История Беларуси</option>'
+		+ '<option>Физика</option>'
+		+ '<option>Французский</option>'
+		+ '<option>Математика</option>'
+		+ '<option>Химия</option>'
+		+ '<option>География</option>'
+		+ '<option>Белорусский</option>'
+		+ '<option>Обществоведение</option>'
+		+ '<option>Английский</option>'
+		+ '<option>Немецкий</option>'
+		+ '</select>'
+		+ '<a class="remove" href="#">-</a>'
+	;
+		document.querySelector('.form.container form input[type="submit"]').insertAdjacentHTML('beforebegin', string10);
+	}
+	else 
+	{
+		document.querySelector('.form.container form input[type="submit"]').insertAdjacentHTML('beforebegin', string5);
+	}
+	
+});
+
+
+document.querySelector('.form.container form').addEventListener('click', function(e){
+	
+	
+    if(e.target && e.target.classList == 'remove')
+    {
+    	e.preventDefault();
+
+    	e.target.parentNode.removeChild(e.target.previousElementSibling);
+    	e.target.parentNode.removeChild(e.target);
+ 	}
+	
+ });	

@@ -372,7 +372,7 @@ html
 						input(type="text" placeholder="Ваше имя" required="required" name="userName")
 						input(type="text" placeholder="Ваш номер телефона" required="required" name="userPhone")
 						p Выберите предмет:
-						select
+						select.initialSelect
 							option Русский язык
 							option Биология
 							option История Беларуси
@@ -385,20 +385,7 @@ html
 							option Обществоведение
 							option Английский
 							option Немецкий
-						select
-							option(selected default) Выберите второй предмет (по желанию)
-							option Русский язык	
-							option Биология
-							option История Беларуси
-							option Физика
-							option Французский
-							option Математика
-							option Химия
-							option География
-							option Белорусский
-							option Обществоведение
-							option Английский
-							option Немецкий		
+						a.add(href="#") +
 						input(type="submit" value="Отправить")
 						.result
 			.map.container

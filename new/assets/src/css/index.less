@@ -963,10 +963,40 @@
 					box-sizing:content-box;
 				}
 
+				
+				select
+				{
+					width: calc(80% - 4.8rem);
+				}
+
 				input[type="submit"]
 				{
 					&:extend(body a.try-button);
 					border:none;
+				}
+
+				a.add
+				{
+					background: #c1272d;
+					color: #fff;
+					padding: 1rem;
+					margin: 1rem;
+					text-decoration: none;
+					border-radius: 7px;
+					transition: 0.5s all;
+
+					&:hover
+					{
+						background: @orange;
+
+					}
+				}
+
+				a.remove
+				{
+					&:extend(.wrap .form.container .inner form a.add all);
+					background-color:@light-blue;
+					padding:1.1rem;
 				}
 
 			}

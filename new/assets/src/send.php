@@ -3,12 +3,15 @@
 //echo $_POST['phone'].' + '.$_POST['subject'];
 
 //echo 'hello';
+$to = 'timotheus@list.ru, alex23011990@gmail.com';
 
 if($_POST['type'] == 'zapis')
 {
-	$to      = 'timotheus@list.ru';
-	$subject = 'лид ct.fzn.by/new';
-	$message = 'Номер телефона: '.$_POST['phone']. "\r\n";
+
+
+	
+	$subject = 'шок-лид';
+	$message = 'Перезвонить по номеру: '. $_POST['phone'] . "\r\n";
 	$message .='Предмет: '.$_POST['subject'];
 	$headers = 'From: webmaster@ct.fzn.by' . "\r\n" .
 	    'Reply-To: webmaster@ct.fzn.by' . "\r\n" .
@@ -27,9 +30,9 @@ if($_POST['type'] == 'zapis')
 
 if($_POST['type'] == 'zakaz')
 {
-	$to      = 'timotheus@list.ru';
-	$subject = 'Перезвонить ct.fzn.by/new';
-	$message = 'Номер телефона: '.$_POST['phone']. "\r\n";
+
+	$subject = 'Обратный звонок';
+	$message = 'Перезвонить по номеру: '. $_POST['phone'] . "\r\n";
 	$headers = 'From: webmaster@ct.fzn.by' . "\r\n" .
 	    'Reply-To: webmaster@ct.fzn.by' . "\r\n" .
 	    'X-Mailer: PHP/' . phpversion();
@@ -46,13 +49,17 @@ if($_POST['type'] == 'zakaz')
 }
 
 
-if($_POST['type'] == 'proba')
+/*if($_POST['type'] == 'proba')
 {
-	$to      = 'timotheus@list.ru';
-	$subject = 'лид с футера ct.fzn.by/new';
-	$message = 'Номер телефона: '.$_POST['phone']. "\r\n";
-	$message .= 'Имя: '.$_POST['name']. "\r\n";
-	$message .= 'Предмет №1: '.$_POST['subject1']. "\r\n";
+	
+
+
+	$subject = 'лид с футера';
+	$message = 'Номер телефона: '. $_POST['phone'] . "\r\n";
+	$message .= 'Имя: '. $_POST['name'] . "\r\n";
+	$message .='Предмет №1: '.$_POST['subject1']. "\r\n";
+
+
 	
 	if($_POST['subject2'])
 	{
@@ -72,4 +79,48 @@ if($_POST['type'] == 'proba')
 	}
 }
 
+
+//print_r($_POST);*/
+
+$json = json_decode(file_get_contents('php://input'));
+
+/*foreach ($json as $key => $value) {
+	echo $key.': '.$value . "\n\r";
+}*/
+
+
+
+	
+if($json)
+{
+	$subject = 'лид с футера';
+	$message = 'Номер телефона: '. $json->phone . "\r\n";
+	$message .= 'Имя: '. $json->name . "\r\n";
+	//$message .='Предмет №1: '.$json->subject0. "\r\n";
+
+	$counter = 1;
+
+	foreach($json as $key=>$value)
+	{
+  		if("subject" == substr($key,0,7))
+  		{
+    		//echo $key;
+    		$message .= 'Предмет №'.$counter. ': '.$value. "\r\n";
+    		$counter++;
+  		}
+	}
+
+
+	$headers = 'From: webmaster@ct.fzn.by' . "\r\n" .
+	    'Reply-To: webmaster@ct.fzn.by' . "\r\n" .
+	    'X-Mailer: PHP/' . phpversion();
+
+	if (mail($to, $subject, $message, $headers))
+	{
+		echo 'ok';
+	} else 
+	{
+		echo 'error';
+	}
+}
 
