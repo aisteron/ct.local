@@ -988,6 +988,12 @@ body a.try-button:hover {
   position: relative;
   border-radius: 10px 10px 0 0;
 }
+@media (max-width: 400px) {
+  .wrap .modal-area .zapis-modal .modal-container,
+  .wrap .modal-area .zakaz-modal .modal-container {
+    width: 95vw;
+  }
+}
 .wrap .modal-area .zapis-modal .modal-header,
 .wrap .modal-area .zakaz-modal .modal-header {
   background-color: #334458;
