@@ -76,7 +76,12 @@ html
 				.inner
 					a(name="about")
 					h2 Команда "Фабрики знаний" <br> это мы организовываем обучение
-					img.lazyload(data-src="assets/img/444.png")
+					picture
+						source(
+						type="image/webp" 
+						data-srcset="assets/img/444.webp 900w, assets/img/444-300.webp 300w" )
+						
+						img.lazyload( data-srcset="assets/img/444.png 900w, assets/img/444-300.png 300w" )
 			.smi.container
 				.inner
 					h2 Мы в СМИ
@@ -160,7 +165,10 @@ html
 						li Высокие баллы на ЦТ
 						li Качественное образование для дальнейшей учебы и жизни
 						li Поступление в выбранный университет
-					img.lazyload(data-src="assets/img/345365.png")
+					//img.lazyload(data-src="assets/img/345365.png")
+					picture
+						source(data-srcset="assets/img/345365.webp" type="image/webp")
+						img.lazyload(data-src="assets/img/345365.png")
 			.testimonials.container.lazyload(data-script="assets/src/js/swiper.min.js" data-link="assets/build/css/swiper.min.css")
 				.inner
 					a(name="testimonials")
