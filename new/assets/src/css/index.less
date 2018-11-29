@@ -1,6 +1,7 @@
 @import "variables";
 @import "layout";
-@import "steps";
+@import "timeline.css";
+
 .wrap
 {	
 
@@ -91,7 +92,7 @@
 		}
 	}
 
-	.smi.container
+	.smi.container 
 	{
 		.inner
 		{
@@ -128,6 +129,50 @@
 		}
 	}
 
+	.steps.container
+	{
+		img 
+		{
+			display: none;
+			
+			@media (max-width:450px)
+			{
+				display: block;
+			}
+			
+		}
+		.timeline-wrapper
+		{
+			display:flex;
+			justify-content: space-between;
+			flex-wrap:wrap;
+		}
+		ul 
+		{
+			@media (max-width:450px) { display: none; }
+			padding-left:0;
+			//margin-left:-2rem;
+			width:300px;
+			li 
+			{
+				list-style-type: none;
+
+				.step1 { background-color: #2e7fb7;}
+				.step2 { background-color: #93268f;}
+				.step3 { background-color: #e7373a;}
+				.step3 { background-color: #e7373a;}
+				.step4 { background-color: #862f3f;}
+				.step5 { background-color: #ee8800;}
+				.step6 { background-color: #3eceb5;}
+				.step7 { background-color: #e0143a;}
+				.step8 { background-color: #c46526;}
+				.step9 { background-color: #86c425;}
+
+			}
+		}
+
+
+	}
 
 	.result.container
 	{
