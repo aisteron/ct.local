@@ -3,7 +3,7 @@
 //echo $_POST['phone'];
 if($_POST['phone'])
 {
-	$to      = 'timotheus@list.ru';
+	$to      = 'timotheus@list.ru, alex23011990@gmail.com';
 	$subject = 'лид по английскому';
 	$message = 'Перезвонить по номеру: '.$_POST['phone'];
 	$headers = 'From: webmaster@ct.fzn.by' . "\r\n" .

@@ -1,0 +1,15 @@
+{
+  "name": "ct.fzn.by-jqm",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-browser-sync": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-pug": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-critical": "latest",
+    "grunt-contrib-less": "latest",
+    "less-plugin-autoprefix": "latest",
+    "less-plugin-clean-css": "latest"
+  }
+}

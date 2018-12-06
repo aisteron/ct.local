@@ -1,0 +1,39 @@
+.cyan {
+  color: #01c6d9;
+}
+#drawer .descr {
+  text-align: center;
+}
+#drawer .descr h4 {
+  color: #334458;
+}
+#drawer .descr p {
+  margin: 0;
+  padding: 0;
+}
+#drawer .descr p a.ui-btn {
+  margin: 0.3rem 0;
+}
+#drawer .descr p a.ui-link {
+  text-decoration: none;
+  color: #334458;
+  position: relative;
+  top: 4px;
+  padding-left: 0.5rem;
+}
+.main-page {
+  /* .ui-panel-wrapper
+	{
+		div(data-role="header")
+		{
+			background: @dark-blue;
+			color:#fff;
+		}
+	} */
+}
+.main-page .ui-header.ui-bar-inherit {
+  background: #334458;
+  color: #fff;
+  text-shadow: none;
+}
+/*# sourceMappingURL=assets/build/css/index.css.map */

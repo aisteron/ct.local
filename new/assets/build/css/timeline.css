@@ -10,11 +10,7 @@ body {
 }
 
 /* Layout */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 
 /* Styling */
 .timeline {
@@ -23,7 +19,7 @@ body {
   max-width: 46em;
 }
 .timeline:before {
-  background-color: black;
+  background-color: #334458;
   content: '';
   margin-left: -1px;
   position: absolute;
@@ -52,7 +48,7 @@ body {
 .timeline-event-copy {
   padding: 2em;
   position: relative;
-  top: -1.875em;
+  top: -2.4em;
   left: 4em;
   width: 80%;
 }
@@ -79,7 +75,7 @@ body {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: black;
+  background-color: #334458;
   outline: 10px solid #9fd7ee;
   display: block;
   margin: 0.5em 0.5em 0.5em -0.5em;

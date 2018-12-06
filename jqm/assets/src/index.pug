@@ -1,0 +1,73 @@
+doctype html
+html
+	head
+		title jQm
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="shortcut icon" href="favicon.ico")
+		link(rel="stylesheet" href="dist/css/jquery.mobile-1.4.5.min.css")
+		link(rel="stylesheet" href="assets/build/css/index.css")
+		script(src="dist/js/jquery-1.11.1.min.js")
+		script(src="dist/js/jquery.mobile-1.4.5.min.js")
+		script(src="assets/src/js/custom.js")
+	body
+		div.main-page(data-role="page")
+			div(data-role="header")
+				h1 Подготовка к ЦТ в Минске
+				a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+
+			div.ui-content(role="main")
+				p Список предметов
+				ul(data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true")
+					li
+						a(href="#bio" data-transition="slide")
+							img(src="assets/img/80-80_1.jpg")
+							h2 Биология
+							p Ср 18.00 - 19.30
+					li
+						a(href="#")
+							img(src="assets/img/80-80_2.jpg")
+							h2 Русский язык
+							p Сб 13.30 - 15.00
+			div(data-role="footer")
+				h4 my footer
+
+			// NAVIGATION DRAWER
+
+			div(data-role="panel" id="drawer" data-display="push")
+				ul(data-role="listview" data-inset="true")
+					li
+						a(href="#") О курсах
+					li
+						a(href="#") Репетиторы
+					li
+						a(href="#") Стоимость
+					li
+						a(href="#") Результаты
+					li
+						a(href="#") Отзывы
+					li
+						a(href="#") Контакты
+				.descr
+					img(src="assets/img/logo-fz.png")
+					h4 <span class="cyan">Ф</span>абрика <span class="cyan">З</span>наний
+					p
+						a.ui-btn.ui-shadow.ui-corner-all.ui-icon-phone.ui-btn-icon-notext.ui-btn-inline(href="tel:+375296188090")
+							a(href="tel:+375296188090") +375 29 618 80 90
+					p
+						a.ui-btn.ui-shadow.ui-corner-all.ui-icon-phone.ui-btn-icon-notext.ui-btn-inline(href="tel:+375336178090")
+							a(href="tel:+375336178090") +375 33 617 80 90	
+
+
+
+			
+		// СТРАНИЦА БИОЛОГИИ
+
+		div(data-role="page" id="bio")
+			div(data-role="header")
+				h1 ЦТ по Биологии
+				a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
+			div.ui-content(role="main")
+				p Подготовка к ЦТ по Биологии
+			div(data-role="footer")
+				h4 bio footer		
+			
