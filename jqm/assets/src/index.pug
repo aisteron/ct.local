@@ -5,14 +5,13 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="shortcut icon" href="favicon.ico")
 		link(rel="stylesheet" href="dist/css/jquery.mobile-1.4.5.min.css")
-		link(rel="stylesheet" href="assets/build/css/index.css")
 		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
 		script(src="dist/js/jquery-1.11.1.min.js")
 		script(src="dist/js/jquery.mobile-1.4.5.min.js")
-		script(src="assets/src/js/custom.js")
+		
 	body
 		div.main-page(data-role="page")
-			div(data-role="header")
+			div(data-role="header" data-position="fixed")
 				h1 Подготовка к ЦТ в Минске
 				a.ui-btn.ui-icon-000.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
 
@@ -22,7 +21,11 @@ html
 					h2 Фабрика Знаний
 					p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. 
 					p Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний.
-					img(src="assets/img/0268.jpg")
+					.responsively-lazy(style="padding-bottom:63.44%")
+						img(src="assets/img/0268.jpg"
+	    				srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+	    				data-srcset="assets/img/0268.webp 400w, assets/img/0268.jpg 400w, assets/img/0268-900.webp 600w, assets/img/0268-900.jpg 600w")
+						//img(src="assets/img/0268.jpg")
 
 				h3 Мы готовим к ЦТ по 12 предметам:
 				ul(data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true")
@@ -36,11 +39,44 @@ html
 							img(src="assets/img/80-80_2.jpg")
 							h2 Русский язык
 							p Сб 13.30 - 15.00
+				h3 У нас 15 профессиональных репетиторов:
+				ul(data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true")
+					li
+						a(href="#" data-transition="slide")
+							img.responsively-lazy(src="assets/img/preps/01.jpg"
+							srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+							data-srcset="assets/img/preps/01.jpg 400w, assets/img/preps/01-240.jpg 600w"
+							width="80" height="80")
+							h2 Александр Сергеевич ЛУЦЕВИЧ
+							p История Беларуси и обществоведение
+					li
+						a(href="#")
+							img.responsively-lazy(src="assets/img/preps/02.jpg"
+							srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+							data-srcset="assets/img/preps/02.jpg 400w, assets/img/preps/02-240.jpg 600w"
+							width="80" height="80")
+							h2 Софья Геннадьевна ЛУЦЕВИЧ
+							p русский язык и литература
+					li
+						a(href="#")
+							img.responsively-lazy(src="assets/img/preps/03.jpg"
+							srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+							data-srcset="assets/img/preps/03.jpg 400w, assets/img/preps/03-240.jpg 600w"
+							width="80" height="80")
+							h2 Владимир Сергеевич ХОДАКОВСКИЙ
+							p химия, биология		
+					li
+						a(href="#")
+							img.responsively-lazy(src="assets/img/preps/04.jpg"
+							srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+							data-srcset="assets/img/preps/04.jpg 400w, assets/img/preps/04-240.jpg 600w"
+							width="80" height="80")
+							h2 Полина Александровна ИВАНОВА
+							p белорусский язык		
 			div(data-role="footer")
 				h4 my footer
 
 			// NAVIGATION DRAWER
-
 			div(data-role="panel" 
 				id="drawer" 
 				data-display="push")
@@ -60,8 +96,8 @@ html
 							a(href="#") Контакты
 				.descr
 					|<div class="wave"><svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 350.88,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"></path></svg></div>
-					
-					img(src="assets/img/logo-fz.png")
+					.responsively-lazy(style="padding-bottom:34.44%")
+						img(src="assets/img/logo-fz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:auto; height:auto")
 					
 					h4 <span class="cyan">Ф</span>абрика <span class="cyan">З</span>наний
 					ul
@@ -81,15 +117,14 @@ html
 
 
 
-			
-		// СТРАНИЦА БИОЛОГИИ
+		// Страницы предметов 	
+		// Биология
+		include inc/bio.pug
 
-		div(data-role="page" id="bio")
-			div(data-role="header")
-				h1 ЦТ по Биологии
-				a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
-			div.ui-content(role="main")
-				p Подготовка к ЦТ по Биологии
-			div(data-role="footer")
-				h4 bio footer		
+
+
+		div.scripts
+			script(src="assets/src/js/custom.js" async defer)
+			script(src="dist/js/responsivelyLazy.min.js" async defer)
+		
 			

@@ -69,7 +69,7 @@ module.exports = function(grunt){
 				*/
 				pug:
 				{
-					files:['assets/src/*.pug'],
+					files:['assets/src/*.pug', 'assets/src/inc/*.pug'],
 					tasks:['pug'],
 					options: {
 				      livereload: true,
