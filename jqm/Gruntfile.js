@@ -25,7 +25,7 @@ module.exports = function(grunt){
 			  production: {
 			    options: 
 				    {
-						//sourceMapURL:'/new/assets/build/css/index.css.map',
+						sourceMapURL:'/jqm/assets/build/css/index.css.map',
 						sourceMap:true,
 
 						// временно отлючаю плагины, т.к. sourcemap не работает с ними.

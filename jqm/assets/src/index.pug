@@ -21,28 +21,29 @@ html
 					h2 Фабрика Знаний
 					p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. 
 					p Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний.
-					.responsively-lazy(style="padding-bottom:63.44%")
-						img(src="assets/img/0268.jpg"
-	    				srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-	    				data-srcset="assets/img/0268.webp 400w, assets/img/0268.jpg 400w, assets/img/0268-900.webp 600w, assets/img/0268-900.jpg 600w")
-						//img(src="assets/img/0268.jpg")
+					.btn-cont
+						a(href="#shock" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-left") Пробное занятие
+
+					img.lazyload(data-src="assets/img/0268.jpg" data-sizes="auto")
 
 				h3 Мы готовим к ЦТ по 12 предметам:
-				ul(data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true")
-					li
-						a(href="#bio" data-transition="slide")
-							img(src="assets/img/80-80_1.jpg")
-							h2 Биология
-							p Ср 18.00 - 19.30
-					li
-						a(href="#")
-							img(src="assets/img/80-80_2.jpg")
-							h2 Русский язык
-							p Сб 13.30 - 15.00
+				include inc/subjects.pug
+				
 				h3 У нас 15 профессиональных репетиторов:
-				include inc/preps.pug		
-			div(data-role="footer")
-				h4 my footer
+				include inc/preps.pug
+
+			//  FOOTER
+
+			div(data-role="footer" data-position="fixed")
+				div(data-role="navbar" )
+					ul
+						li
+							a(href="" data-icon="grid") Все курсы
+						li
+							a(href="" data-icon="calendar") Расписание
+						li
+							a(href="#shock" 
+							data-rel="popup" data-position-to="window" data-icon="mail") Пробное
 
 			// NAVIGATION DRAWER
 			div(data-role="panel" 
@@ -63,9 +64,9 @@ html
 						li
 							a(href="#") Контакты
 				.descr
-					|<div class="wave"><svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 350.88,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"></path></svg></div>
-					.responsively-lazy(style="padding-bottom:34.44%")
-						img(src="assets/img/logo-fz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:auto; height:auto")
+					|<div class="wave">
+					|<svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 350.88,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"></path></svg></div>
+					img.lazyload(data-src="assets/img/logo-fz.png" data-sizes="auto")
 					
 					h4 <span class="cyan">Ф</span>абрика <span class="cyan">З</span>наний
 					ul
@@ -79,10 +80,23 @@ html
 					
 					.social-items
 						a(href="https://vk.com/fabrica_z" target="_blank" rel="external")
-							img(src="assets/img/vk.svg")
+							img.lazyload(data-src="assets/img/vk.svg")
 						a(href="https://www.instagram.com/podgotovka_ct/" target="_blank" rel="external")
-							img(src="assets/img/insta.svg") 
-
+							img.lazyload(data-src="assets/img/insta.svg") 
+			// POPUP
+			div.ui-corner-all(data-role="popup" id="shock")
+				form
+					div(style="padding:10px 20px;")
+						h3 Бесплатное пробное занятие
+						label.ui-hidden-accessible(for="un") Ваше имя:
+						input(type="text" name="user" id="un" value="" placeholder="Ваше имя")
+						label.ui-hidden-accessible(for="pw") Ваш номер телефона:
+						input(type="text" 
+						name="phone" 
+						id="pw" 
+						value="" 
+						placeholder="+375 29 xxx xx xx")
+						button(type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check") Отправить
 
 
 		// Страницы предметов 	
@@ -93,6 +107,6 @@ html
 
 		div.scripts
 			script(src="assets/src/js/custom.js" async defer)
-			script(src="dist/js/responsivelyLazy.min.js" async defer)
+			script(src="dist/js/lazysizes.min.js" async defer)
 		
 			
