@@ -14,7 +14,8 @@ module.exports = function(grunt){
 			    },
 			    
 			    files: {
-			      'index.html':['assets/src/index.pug']
+			      'index.html':['assets/src/index.pug'],
+			      'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
 			    },
 			    
 			  }
@@ -69,7 +70,7 @@ module.exports = function(grunt){
 				*/
 				pug:
 				{
-					files:['assets/src/*.pug', 'assets/src/inc/*.pug'],
+					files:['assets/src/*.pug', 'assets/src/inc/*.pug', 'assets/src/pages/subj-pug/*.pug'],
 					tasks:['pug'],
 					options: {
 				      livereload: true,

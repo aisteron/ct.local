@@ -82,6 +82,9 @@ ul li a {
   background-image: url("../../img/000.svg");
   background-color: #fff;
 }
+.main-page .ui-content {
+  background-color: #eee;
+}
 .main-page .ui-content .intro {
   background-color: #9fd7ee;
   margin: -1rem;
@@ -109,7 +112,6 @@ ul li a {
 }
 .main-page .ui-content .intro p {
   padding: 1rem;
-  text-indent: 0.5rem;
   font-family: "Roboto";
 }
 .main-page .ui-content .intro p:nth-of-type(2) {
@@ -123,5 +125,52 @@ ul li a {
 .main-page .ui-content .intro h3 {
   padding-top: 1rem;
   margin-top: 0;
+}
+.main-page .ui-content p.short-desc {
+  margin-top: 0.5rem;
+}
+.main-page .ui-content h3.pre-col {
+  margin-bottom: 0rem;
+}
+.main-page .ui-content .extra-p {
+  font-size: 0.9rem;
+  font-family: Roboto, sans-serif;
+}
+.main-page .ui-content .extra-p ul {
+  padding-left: 1rem;
+}
+.main-page .ui-content .extra-p ul li {
+  list-style-type: square;
+  padding-bottom: 0.5rem;
+}
+.main-page .ui-content .col-wrap a.ui-collapsible-heading-toggle {
+  color: #8c8c8c;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.main-page .ui-content .contacth3 {
+  padding-bottom: 1rem;
+}
+.main-page .ui-content .contacts-map {
+  background-color: #9fd7ee;
+  font-family: Roboto, sans-serif;
+  margin: -1rem;
+  padding: 1rem;
+  text-shadow: none;
+}
+.main-page .ui-content .contacts-map ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+.main-page .ui-content .contacts-map ul li {
+  line-height: 2;
+}
+.main-page .ui-content .contacts-map ul li a {
+  color: #334458;
+}
+.main-page .ui-content .contacts-map iframe {
+  width: 100vw;
+  margin: 0 -1rem;
+  margin-bottom: -1.3rem;
 }
 /*# sourceMappingURL=/jqm/assets/build/css/index.css.map */

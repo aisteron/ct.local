@@ -10,6 +10,7 @@ html
 		script(src="dist/js/jquery.mobile-1.4.5.min.js")
 		
 	body
+		//main
 		div.main-page(data-role="page")
 			div(data-role="header" data-position="fixed")
 				h1 Подготовка к ЦТ в Минске
@@ -22,15 +23,66 @@ html
 					p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. 
 					p Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний.
 					.btn-cont
-						a(href="#shock" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-left") Пробное занятие
+						a(href="#shock" data-rel="popup" data-position-to="window" class="ui-nodisc-icon ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-left") Пробное занятие
 
 					img.lazyload(data-src="assets/img/0268.jpg" data-sizes="auto")
 
-				h3 Мы готовим к ЦТ по 12 предметам:
-				include inc/subjects.pug
+				h3.pre-col Список предметов
+				p.short-desc Мы готовим к централизованному тестированию <b>по 12 предметам:</b>
+				.col-wrap
+					a(name="subjects")
+					
+					.subjects-collapse(
+					data-role="collapsible" 
+					data-collapsed="false"
+					data-collapsed-icon="carat-d" 
+					data-expanded-icon="carat-u"
+					data-iconpos="right"
+					data-inset="false"
+					)
+						h4 Свернуть
+						include inc/subjects.pug
 				
-				h3 У нас 15 профессиональных репетиторов:
-				include inc/preps.pug
+				h3.pre-col Репетиторы
+				p.short-desc У нас 15 профессиональных репетиторов с многолетним стажем работы:
+				.col-wrap
+					
+					.subjects-collapse(
+						data-role="collapsible" 
+						data-collapsed="false"
+						data-collapsed-icon="carat-d" 
+						data-expanded-icon="carat-u"
+						data-iconpos="right"
+						data-inset="false"
+					)
+						h4 Свернуть
+						include inc/preps.pug
+
+				h3.pre-col Расписание курсов
+				a(name="schedule")
+				p.short-desc Мы работаем без выходных. Приходите на первое занятие <a href="#shock" data-rel="popup" data-position-to="window">бесплатно</a>
+				.extra-p
+					p На <b>пробном уроке</b> ученик может:
+					ul
+						li Познакомиться нашими преподавателями и их методикой подготовки к ЦТ;
+						li Пройти диагностику своих знаний и понять, на каком уровне подготовки сейчас находится абитуриент;
+						li Понять, подходит ли ему наша программа подготовки к ЦТ на баллы 80+.
+				p Если ученик решает не продолжать обучение, то пробный урок будет для него бесплатным!
+				.col-wrap
+					
+					.subjects-collapse(
+						data-role="collapsible" 
+						data-collapsed="false"
+						data-collapsed-icon="carat-d" 
+						data-expanded-icon="carat-u"
+						data-iconpos="right"
+						data-inset="false"
+					)
+						h4 Свернуть	
+						include inc/schedule.pug
+
+				h3.contacth3 Контакты
+				include inc/contacts.pug
 
 			//  FOOTER
 
@@ -38,51 +90,16 @@ html
 				div(data-role="navbar" )
 					ul
 						li
-							a(href="" data-icon="grid") Все курсы
+							a.ui-nodisc-icon.ui-alt-icon(href="#subjects" data-icon="grid" data-ajax="false") Все курсы
 						li
-							a(href="" data-icon="calendar") Расписание
+							a.ui-nodisc-icon.ui-alt-icon(href="#schedule" data-icon="calendar" data-ajax="false") Расписание
 						li
-							a(href="#shock" 
+							a.ui-nodisc-icon.ui-alt-icon(href="#shock" 
 							data-rel="popup" data-position-to="window" data-icon="mail") Пробное
 
 			// NAVIGATION DRAWER
-			div(data-role="panel" 
-				id="drawer" 
-				data-display="push")
-				.ul-wrap
-					ul(data-role="listview" data-inset="true")
-						li
-							a(href="#") О курсах
-						li
-							a(href="#") Репетиторы
-						li
-							a(href="#") Стоимость
-						li
-							a(href="#") Результаты
-						li
-							a(href="#") Отзывы
-						li
-							a(href="#") Контакты
-				.descr
-					|<div class="wave">
-					|<svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 350.88,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"></path></svg></div>
-					img.lazyload(data-src="assets/img/logo-fz.png" data-sizes="auto")
-					
-					h4 <span class="cyan">Ф</span>абрика <span class="cyan">З</span>наний
-					ul
-						li
-							a.phone(href="tel:+375296188090") +375 29 618 80 90
-						li
-							a.phone(href="tel:+375336178090") +375 33 617 80 90
-						li
-							a.mail(href="mailto:podgotovka.ct@gmail.com") podgotovka.ct@gmail.com
-					h4 <span class="cyan">F</span>ollow <span class="cyan">U</span>s
-					
-					.social-items
-						a(href="https://vk.com/fabrica_z" target="_blank" rel="external")
-							img.lazyload(data-src="assets/img/vk.svg")
-						a(href="https://www.instagram.com/podgotovka_ct/" target="_blank" rel="external")
-							img.lazyload(data-src="assets/img/insta.svg") 
+			include inc/drawer.pug
+
 			// POPUP
 			div.ui-corner-all(data-role="popup" id="shock")
 				form
@@ -99,9 +116,9 @@ html
 						button(type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check") Отправить
 
 
-		// Страницы предметов 	
-		// Биология
-		include inc/bio.pug
+		//- // Страницы предметов 	
+		//- // Биология
+		//- include inc/bio.pug
 
 
 
