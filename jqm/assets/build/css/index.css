@@ -136,10 +136,10 @@ ul li a {
   font-size: 0.9rem;
   font-family: Roboto, sans-serif;
 }
-.main-page .ui-content .extra-p ul {
+.main-page .ui-content .extra-p + ul {
   padding-left: 1rem;
 }
-.main-page .ui-content .extra-p ul li {
+.main-page .ui-content .extra-p + ul li {
   list-style-type: square;
   padding-bottom: 0.5rem;
 }

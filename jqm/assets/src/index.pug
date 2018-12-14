@@ -1,129 +1,100 @@
-doctype html
-html
-	head
-		title jQm
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="shortcut icon" href="favicon.ico")
-		link(rel="stylesheet" href="dist/css/jquery.mobile-1.4.5.min.css")
-		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
-		script(src="dist/js/jquery-1.11.1.min.js")
-		script(src="dist/js/jquery.mobile-1.4.5.min.js")
-		
-	body
-		//main
-		div.main-page(data-role="page")
-			div(data-role="header" data-position="fixed")
-				h1 Подготовка к ЦТ в Минске
-				a.ui-btn.ui-icon-000.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+extends inc/layout.pug
+block content
+	div.main-page(data-role="page")
+		div(data-role="header" data-position="fixed")
+			h1 Подготовка к ЦТ в Минске 
+			a.ui-btn.ui-icon-000.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
 
-			div.ui-content(role="main")
-				.intro
-					h3 Курсы по подготовке к ЦТ в Минске
-					h2 Фабрика Знаний
-					p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. 
-					p Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний.
-					.btn-cont
-						a(href="#shock" data-rel="popup" data-position-to="window" class="ui-nodisc-icon ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-left") Пробное занятие
+		div.ui-content(role="main")
+			.intro
+				h3 Курсы по подготовке к ЦТ в Минске
+				h2 Фабрика Знаний
+				p Талантливые и современные репетиторы объединились вместе и готовы подготовить к ЦТ любого абитуриента. 
+				p Основная ставка у нас идёт на развитие личности выпускников школ при строгом контроле знаний.
+				.btn-cont
+					a(href="#shock" data-rel="popup" data-position-to="window" class="ui-nodisc-icon ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-left") Пробное занятие
 
-					img.lazyload(data-src="assets/img/0268.jpg" data-sizes="auto")
+				img.lazyload(data-src="assets/img/0268.jpg" data-sizes="auto")
 
-				h3.pre-col Список предметов
-				p.short-desc Мы готовим к централизованному тестированию <b>по 12 предметам:</b>
-				.col-wrap
-					a(name="subjects")
-					
-					.subjects-collapse(
+			h3.pre-col Список предметов
+			p.short-desc Мы готовим к централизованному тестированию <b>по 12 предметам:</b>
+			.col-wrap
+				a(name="subjects")
+				
+				.subjects-collapse(
+				data-role="collapsible" 
+				data-collapsed="false"
+				data-collapsed-icon="carat-d" 
+				data-expanded-icon="carat-u"
+				data-iconpos="right"
+				data-inset="false"
+				)
+					h4 Свернуть
+					include inc/subjects.pug
+			
+			h3.pre-col Репетиторы
+			p.short-desc У нас 15 профессиональных репетиторов с многолетним стажем работы:
+			.col-wrap
+				
+				.subjects-collapse(
 					data-role="collapsible" 
 					data-collapsed="false"
 					data-collapsed-icon="carat-d" 
 					data-expanded-icon="carat-u"
 					data-iconpos="right"
 					data-inset="false"
-					)
-						h4 Свернуть
-						include inc/subjects.pug
-				
-				h3.pre-col Репетиторы
-				p.short-desc У нас 15 профессиональных репетиторов с многолетним стажем работы:
-				.col-wrap
-					
-					.subjects-collapse(
-						data-role="collapsible" 
-						data-collapsed="false"
-						data-collapsed-icon="carat-d" 
-						data-expanded-icon="carat-u"
-						data-iconpos="right"
-						data-inset="false"
-					)
-						h4 Свернуть
-						include inc/preps.pug
-
-				h3.pre-col Расписание курсов
-				a(name="schedule")
-				p.short-desc Мы работаем без выходных. Приходите на первое занятие <a href="#shock" data-rel="popup" data-position-to="window">бесплатно</a>
-				.extra-p
-					p На <b>пробном уроке</b> ученик может:
-					ul
-						li Познакомиться нашими преподавателями и их методикой подготовки к ЦТ;
-						li Пройти диагностику своих знаний и понять, на каком уровне подготовки сейчас находится абитуриент;
-						li Понять, подходит ли ему наша программа подготовки к ЦТ на баллы 80+.
-				p Если ученик решает не продолжать обучение, то пробный урок будет для него бесплатным!
-				.col-wrap
-					
-					.subjects-collapse(
-						data-role="collapsible" 
-						data-collapsed="false"
-						data-collapsed-icon="carat-d" 
-						data-expanded-icon="carat-u"
-						data-iconpos="right"
-						data-inset="false"
-					)
-						h4 Свернуть	
-						include inc/schedule.pug
-
-				h3.contacth3 Контакты
-				include inc/contacts.pug
-
-			//  FOOTER
-
-			div(data-role="footer" data-position="fixed")
-				div(data-role="navbar" )
-					ul
-						li
-							a.ui-nodisc-icon.ui-alt-icon(href="#subjects" data-icon="grid" data-ajax="false") Все курсы
-						li
-							a.ui-nodisc-icon.ui-alt-icon(href="#schedule" data-icon="calendar" data-ajax="false") Расписание
-						li
-							a.ui-nodisc-icon.ui-alt-icon(href="#shock" 
-							data-rel="popup" data-position-to="window" data-icon="mail") Пробное
-
-			// NAVIGATION DRAWER
-			include inc/drawer.pug
-
-			// POPUP
-			div.ui-corner-all(data-role="popup" id="shock")
-				form
-					div(style="padding:10px 20px;")
-						h3 Бесплатное пробное занятие
-						label.ui-hidden-accessible(for="un") Ваше имя:
-						input(type="text" name="user" id="un" value="" placeholder="Ваше имя")
-						label.ui-hidden-accessible(for="pw") Ваш номер телефона:
-						input(type="text" 
-						name="phone" 
-						id="pw" 
-						value="" 
-						placeholder="+375 29 xxx xx xx")
-						button(type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check") Отправить
-
-
-		//- // Страницы предметов 	
-		//- // Биология
-		//- include inc/bio.pug
-
-
-
-		div.scripts
-			script(src="assets/src/js/custom.js" async defer)
-			script(src="dist/js/lazysizes.min.js" async defer)
-		
+				)
+					h4 Свернуть
+					include inc/preps.pug
+			h3 Пробные занятия
+			p.extra-p На <b> бесплатном пробном уроке</b> ученик может: 
+				ul
+					li Познакомиться нашими преподавателями и их методикой подготовки к ЦТ;
+					li Пройти диагностику своих знаний и понять, на каком уровне подготовки сейчас находится абитуриент;
+					li Понять, подходит ли ему наша программа подготовки к ЦТ на баллы 80+.
+			p Если ученик решает не продолжать обучение, то пробный урок будет для него бесплатным! Приглашаем вас на <a href="#shock" data-rel="popup" data-position-to="window">пробный урок</a>
 			
+			h3.pre-col Расписание курсов
+			a(name="schedule")
+			p.short-desc Мы работаем без выходных. По будням занятия проводятся вечером, а на выходных в течении всего дня.
+	
+			.col-wrap
+				
+				.subjects-collapse(
+					data-role="collapsible" 
+					data-collapsed="false"
+					data-collapsed-icon="carat-d" 
+					data-expanded-icon="carat-u"
+					data-iconpos="right"
+					data-inset="false"
+				)
+					h4 Свернуть	
+					include inc/schedule.pug
+
+			h3.contacth3 Контакты
+			include inc/contacts.pug
+
+		//  FOOTER
+		include inc/footer.pug
+		
+
+		// NAVIGATION DRAWER
+		include inc/drawer.pug 
+
+		// POPUP
+		div.ui-corner-all(data-role="popup" id="shock")
+			form
+				div(style="padding:10px 20px;")
+					h3 Бесплатное пробное занятие
+					label.ui-hidden-accessible(for="un") Ваше имя:
+					input(type="text" name="user" id="un" value="" placeholder="Ваше имя")
+					label.ui-hidden-accessible(for="pw") Ваш номер телефона:
+					input(type="text" 
+					name="phone" 
+					id="pw" 
+					value="" 
+					placeholder="+375 29 xxx xx xx")
+					button(type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check") Отправить
+
+	
+		

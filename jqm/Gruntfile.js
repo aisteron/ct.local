@@ -16,6 +16,7 @@ module.exports = function(grunt){
 			    files: {
 			      'index.html':['assets/src/index.pug'],
 			      'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
+			      'assets/src/pages/subj-html/rus.html':['assets/src/pages/subj-pug/rus.pug'],
 			    },
 			    
 			  }

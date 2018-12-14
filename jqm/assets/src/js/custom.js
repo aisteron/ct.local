@@ -28,33 +28,54 @@ document.querySelectorAll('a[href="#subjects"]').forEach(function(e){ smooth_scr
 
 function rename_header(e)
 {
-
+	
 	if(e.classList.contains('ui-collapsible-heading-collapsed'))
 	{
+		e.innerHTML='<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-inherit">Развернуть<span class="ui-collapsible-heading-status"> click to collapse contents</span></a>';
 		
-		e.innerHTML='<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-icon-carat-u ui-btn-icon-right ui-btn-inherit">Свернуть<span class="ui-collapsible-heading-status"> click to collapse contents</span></a>';
 	}
 	else 
 	{
-		e.innerHTML='<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-inherit">Развернуть<span class="ui-collapsible-heading-status"> click to collapse contents</span></a>';
+		e.innerHTML='<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-icon-carat-u ui-btn-icon-right ui-btn-inherit">Свернуть<span class="ui-collapsible-heading-status"> click to collapse contents</span></a>';
 	}
 }
 
 document.querySelectorAll('.ui-collapsible-heading').forEach(function(item){
 	
 	item.addEventListener('click', function(){
-		rename_header(item);
+		rename_header(this);
 		
 
 	})
 })
 
-document.querySelectorAll('.col-wrap h4').forEach(function(e){
-	//console.log(e);
+// подмена пути в ссылках в дочерних страницах в футере
 
-	e.addEventListener('click', function(){
-		rename_header(e);
+$(window).on( "pageload", function( event ) {
+	console.log('page load');
+	let footer = $('div[data-role="footer"]');
+
+	footer.find('a').each(function(i, e){
+		//console.log(e.attr('href'));
+		/*let href = e.getAttribute('href');
+		e.setAttribute('href','/jqm/'+href);
+		e.setAttribute('data-rel', 'back');*/
+		//console.log(e);
+		e.addEventListener('click', function(n){
+				window.history.back();
+				console.log('ku');
+		})
+
 		
-
 	})
+
+
 })
+
+
+/*$( window ).on( "navigate", function( event, data ){
+console.log( data.state.info );
+console.log( data.state.direction );
+console.log( data.state.url );
+console.log( data.state.hash );
+});*/

@@ -1,8 +1,14 @@
-div(data-role="page" id="bio")
-	div(data-role="header")
-		h1 ЦТ по Биологии
-		a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
-	div.ui-content(role="main")
-		p Подготовка к ЦТ по Биологии
-	div(data-role="footer")
-		h4 bio footer
+extends ../../inc/layout.pug
+block content
+	div(data-role="page" id="bio")
+		div(data-role="header")
+			h1 ЦТ по Биологии
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
+		div.ui-content(role="main")
+			p Подготовка к ЦТ по Биологии
+			p: a(
+			href="/jqm" 
+			data-rel="back" 
+			data-direction="reverse") главная
+		// footer
+		include ../../inc/footer.pug
