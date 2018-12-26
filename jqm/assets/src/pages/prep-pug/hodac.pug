@@ -1,0 +1,14 @@
+extends ../../inc/layout.pug
+block content
+	- var path = "/jqm/assets/img/preps-images/";
+	div.page-prep(data-role="page")
+		div(data-role="header")
+			h1 Владимир Сергеевич Ходаковский
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-ajax="false")
+		div.ui-content(role="main") 
+			.post-header.lazyload(data-bg=path+"hodac.jpg")
+				.desc
+					p Владимир Андреевич ХОДАКОВСКИЙ
+					p химия, биология
+		// footer
+		include ../../inc/footer.pug

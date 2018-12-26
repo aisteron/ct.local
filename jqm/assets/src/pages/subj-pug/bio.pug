@@ -1,14 +1,148 @@
 extends ../../inc/layout.pug
 block content
-	div(data-role="page" id="bio")
+	- var path = "/jqm/assets/img/subject-images/";
+	div.page-subj(data-role="page")
 		div(data-role="header")
 			h1 ЦТ по Биологии
 			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
 		div.ui-content(role="main")
-			p Подготовка к ЦТ по Биологии
-			p: a(
-			href="/jqm" 
-			data-rel="back" 
-			data-direction="reverse") главная
+			.post-header.lazyload(data-bg=path+"dna.jpg")
+				span Подготовка к Цетрализованному тестированию по Биологии
+				img.logo(src="/jqm/assets/img/logo-fz.png")
+			.intro
+				p   Хотите улучшить знания по биологии для тестирования? Научиться стратегии правильного решения задач в условиях стрессовой атмосферы экзамена? Тогда записывайтесь на курс подготовки к ЦТ по биологии.
+				a.white-button Записаться
+			.blue-arc
+				svg(viewBox="0 0 500 150" 
+				preserveAspectRatio="none")
+					path(d="M0.85,21.20 C216.98,67.59 273.98,67.59 499.72,22.20 L500.00,0.00 L0.00,0.00 Z")
+				h2 Наши преимущества
+				ul
+					li
+						img(src = path + "budget.svg")
+						p Стоимость
+						p от 12,6 р.
+					li
+						img(src = path + "hourglass.svg")
+						p Продолжительность
+						p.long 2 раза в неделю по 1,5 ч
+					li
+						img(src = path + "clock.svg")
+						p Расписание
+						p.long В будни вечером и выходные
+			.for-what
+				h2 Для чего курс?
+				p Результаты обучения на курсе подготовки к ЦТ:
+				ul
+					li Знакомство с форматом ЦТ и решение типовых задач.
+					li Владение лексикой и грамматикой на уровне B2.
+					li Владение различными методами чтения и аудирования.
+					li Написание разных стилей текстов.
+			.prep
+				h2 Преподаватель
+				.photo
+					img.lazyload(data-src=path+"hodac.png")
+					p Владимир Андреевич Ходаковский
+					.short
+						span Стаж: 8 лет
+						span Научных работ: 16
+				p В преподавательской деятельности 8 лет. Автор 16 научных работ, в том числе 26 тезисов и 14 статей. Профессиональный репетитор по школьной программе и подготовке к ЦТ.
+				
+				a.white-button Подробнее
+			.progr
+				h2 Программа курса
+				div(data-role="collapsible" data-inset="false")
+					h4 Морфемика
+					p Орфограммы в корнях, на стыке корня и приставки, в приставках и суффиксах (особое внимание уделяется повторению правописания Н и НН в разных частях речи).
+				div(data-role="collapsible" data-inset="false")
+					h4 Морфология
+					p контент
+				div(data-role="collapsible" data-inset="false")
+					h4 Нормы и стили языка
+					p контент
+			.testi.lazyload(
+				data-script="/jqm/dist/js/swiper.min.js" 
+				data-link="/jqm/dist/css/swiper.min.css")
+				h2 Отзывы о курсе
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem rem eligendi minus sed quo eius ipsam, dolor nulla molestias et suscipit animi? Maiores rem assumenda odio quia alias vero soluta!
+						.swiper-slide
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sed vero nostrum iste nobis ipsum, pariatur neque deserunt expedita velit non tempore aliquid quae, est et quod numquam repellendus illum?
+					.swiper-pagination
+			.results
+				svg(viewBox="0 0 500 150" 
+				preserveAspectRatio="none")
+					path(d="M0.85,21.20 C216.98,67.59 273.98,67.59 499.72,22.20 L500.00,0.00 L0.00,0.00 Z")
+				h2 Результаты
+				.items
+					.item
+						.score 85%
+						p Учеников отмечают, что стали чувствовать себя увереннее на школьных занятиях
+					.item
+						.score 87%
+						p Учащихся в Фабрике Знаний достигают своих целей уже в первом полугодии	
+					.item
+						.score 92%
+						p Школьников считают, что курсы подготовки к ЦТ в Фабрике Знаний помогли сдать экзамен на желаемый балл	
+					.item
+						.score 94%
+						p Родителей отмечают повышение мотивации к обучению у своих детей
+				a.blue-button Записаться
+			.faq
+				h2 Ответы на вопросы			
+				div(data-role="collapsible" data-inset="false")
+					h4 Кто преподает на курсах?
+					p Занятия ведут профессиональные репетиторы, большинство из которых имеют опыт работы в данной сфере, а также немалый опыт индивидуальных занятий со школьниками.
+				div(data-role="collapsible" data-inset="false")
+					h4 В чем преимущество Фабрики Знаний?
+					p контент
+			.rasp
+				h2 Расписание занятий
+				table.ui-responsive.table-stroke(
+				data-role="table" 
+				id="subj-table" 
+				data-mode="columntoggle"
+				data-column-btn-text="Настройка столбцов.."
+				)
+					thead
+						tr
+							th(data-priority="1") Дата
+							th Время 
+							th(data-priority="2") Препод
+					tbody
+						tr
+							td 12 дек
+							td 16.30-18.00
+							td Луцевич А.С.	
+						tr
+							td 13 дек
+							td 16.30-18.00
+							td Луцевич А.С.
+				a.white-button Записаться
+			.inner-footer
+				svg(viewBox="0 0 500 150" 
+				preserveAspectRatio="none")
+					path(d="M0.85,21.20 C216.98,67.59 273.98,67.59 499.72,22.20 L500.00,0.00 L0.00,0.00 Z")
+				img.lazyload(data-src="/jqm/assets/img/log+text.svg")
+				p Профессиональная подготовка к ЦТ в Минске	
+				ul
+					li podgotovka.ct@gmail.com
+					li: a(href="tel:+375296188090") +375 29 618 80 90
+					li: a(href="tel:+375336178090") +375 33 617 80 90
+				p г. Минск, проспект Машерова, 10, 3 этаж, кабинеты 302-304 станция метро "Площадь Победы"
+				
+				.small
+					p 2018 "Фабрика Знаний".
+
+					p Частное унитарное предприятие по оказанию услуг "Фэктори-зет". Зарегистрировано 14 июля 2014 года Минским горисполкомом.
+
+
+
+
+
+
+						
 		// footer
 		include ../../inc/footer.pug

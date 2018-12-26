@@ -1,0 +1,223 @@
+// страница предмета
+
+// биология
+.page-subj
+{
+	font-family: Roboto;
+	text-shadow: none;
+	h2 
+	{
+		font-weight: 200;
+		font-family: Roboto;
+	}
+	ul 
+	{
+		padding-left: 0;
+	}
+
+	.post-header
+	{
+		text-shadow: none;
+		background-size:cover;
+		min-height: 250px;
+		margin: -1rem -1rem 0;
+		padding: 1rem;
+		color:#fff;
+		position: relative;
+
+
+		img.logo 
+		{
+			position: absolute;
+			top: 1.5rem;
+			right: 1rem;
+			width: 70px;
+		}
+		span 
+		{
+			font-size:2rem;
+			font-weight: 100;
+			
+			position: absolute;
+			bottom: 1rem;
+			@media (max-width:300px)
+			{
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.intro
+	{
+		p 
+		{
+			font-size:0.9rem;
+
+		}
+	}
+
+	.blue-arc
+	{
+		&:extend(.arc all);
+		ul
+		{
+			li 
+			{
+				padding-bottom: 2rem;
+				&:nth-of-type(1)
+				{
+					padding-top:1.5rem;
+				}
+				img 
+				{
+					width:45px;
+					float: left;
+					padding-right: 1rem;
+				}
+
+				p 
+				{
+					margin:0rem;
+					padding:0rem;
+					font-size: 0.9rem;
+
+					&:nth-of-type(1)
+					{
+						margin-bottom:0.4rem;
+						padding-top: 0.2rem;
+					}
+				}
+				p.long
+				{
+					padding-left: 4.2em;
+					text-indent: -0em;
+				}
+			}
+		}
+	} // blue-arc
+
+	.for-what
+	{
+		ul 
+		{
+			padding-left:1rem;
+			li 
+			{
+				list-style-type: unset;
+				padding-bottom: 0.5rem;
+			}
+		}
+	}
+
+	.prep
+	{
+		.photo 
+		{
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			img 
+			{
+				float:left;
+				padding-right:1rem;
+
+			}
+			p 
+			{
+				text-transform: uppercase;
+				color:#334458;
+				font-weight:bold;
+			}
+			.short
+			{
+				span
+				{
+					display: block;
+					color:#a7a7a7;
+				}
+			}
+		}
+	} // .prep
+
+	.testi
+	{
+		.swiper-wrapper
+		{
+			padding-bottom: 2rem;
+		}
+		.swiper-pagination-bullet-active
+		{
+			color:#334458;
+			background:#334458;
+		}
+		.swiper-pagination-bullet
+		{
+			width:10px;
+			height:10px;
+		}
+	}
+
+	.results
+	{
+	&:extend(.arc all);	
+
+		.items
+		{
+			.item
+			{
+				display: flex;
+				align-items: center;
+				.score
+				{
+					width: 80px;
+					min-width: 80px;
+					line-height: 80px;
+					border-radius: 50%;
+					text-align: center;
+					font-size: 32px;
+					border: 2px solid #fff;
+				    margin: 1rem 1rem 1rem 0;
+				}
+			}
+		}
+	} //results
+
+	.faq
+	{
+
+	}
+
+	.inner-footer
+	{
+		&:extend(.arc all);
+		img 
+		{
+			width:140px;
+			margin:0 auto;
+			display:block;
+		}
+		a 
+		{
+			color:#fff;
+			font-weight:normal;
+		}
+		ul 
+		{
+			li 
+			{
+			    line-height: 2;
+			}
+		}
+		.small
+		{
+			margin-top:2rem;
+			p 
+			{
+				font-size:0.8rem;
+			}
+		}
+	}
+
+}	

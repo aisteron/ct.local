@@ -40,7 +40,7 @@ function rename_header(e)
 	}
 }
 
-document.querySelectorAll('.ui-collapsible-heading').forEach(function(item){
+document.querySelectorAll('.main-page .ui-collapsible-heading').forEach(function(item){
 	
 	item.addEventListener('click', function(){
 		rename_header(this);
@@ -50,16 +50,16 @@ document.querySelectorAll('.ui-collapsible-heading').forEach(function(item){
 })
 
 // подмена пути в ссылках в дочерних страницах в футере
-
+/*
 $(window).on( "pageload", function( event ) {
 	console.log('page load');
 	let footer = $('div[data-role="footer"]');
 
 	footer.find('a').each(function(i, e){
 		//console.log(e.attr('href'));
-		/*let href = e.getAttribute('href');
+		let href = e.getAttribute('href');
 		e.setAttribute('href','/jqm/'+href);
-		e.setAttribute('data-rel', 'back');*/
+		e.setAttribute('data-rel', 'back');
 		//console.log(e);
 		e.addEventListener('click', function(n){
 				window.history.back();
@@ -71,11 +71,4 @@ $(window).on( "pageload", function( event ) {
 
 
 })
-
-
-/*$( window ).on( "navigate", function( event, data ){
-console.log( data.state.info );
-console.log( data.state.direction );
-console.log( data.state.url );
-console.log( data.state.hash );
-});*/
+*/
