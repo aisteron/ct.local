@@ -1,7 +1,8 @@
 doctype html
 html
+	block head
 	head
-		title jQm
+		title #{title}
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="shortcut icon" href="/jqm/favicon.ico")
 		link(href="https://fonts.googleapis.com/css?family=Roboto:100,200,400" rel="stylesheet")
@@ -10,3 +11,4 @@ html
 		script(src="/jqm/dist/js/jquery.mobile-1.4.5.min.js")
 	body
 	block content
+	block foot	

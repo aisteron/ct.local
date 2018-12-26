@@ -1,4 +1,6 @@
 extends inc/layout.pug
+block head
+	- var title="Курсы подготовки к ЦТ в Минске";
 block content
 	div.main-page(data-role="page")
 		div(data-role="header" data-position="fixed")
@@ -74,27 +76,15 @@ block content
 			h3.contacth3 Контакты
 			include inc/contacts.pug
 
-		//  FOOTER
-		include inc/footer.pug
+		//FOOTER
+		include inc/inner-footer.pug
 		
 
 		// NAVIGATION DRAWER
 		include inc/drawer.pug 
 
 		// POPUP
-		div.ui-corner-all(data-role="popup" id="shock")
-			form
-				div(style="padding:10px 20px;")
-					h3 Бесплатное пробное занятие
-					label.ui-hidden-accessible(for="un") Ваше имя:
-					input(type="text" name="user" id="un" value="" placeholder="Ваше имя")
-					label.ui-hidden-accessible(for="pw") Ваш номер телефона:
-					input(type="text" 
-					name="phone" 
-					id="pw" 
-					value="" 
-					placeholder="+375 29 xxx xx xx")
-					button(type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check") Отправить
+		include inc/popup.pug
 
 	
 		

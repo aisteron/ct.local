@@ -1,10 +1,19 @@
 extends ../../inc/layout.pug
+block head
+	- var title="Подготовка к ЦТ по русскому языку в Минске";
 block content
-	div(data-role="page" id="bio")
+	
+	div.page-subj(data-role="page")
 		div(data-role="header")
 			h1 ЦТ по русскому языку
-			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-ajax="false")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
 		div.ui-content(role="main")
 			p Подготовка к ЦТ по русскому языку 
+
 		// footer
-		include ../../inc/footer.pug
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug

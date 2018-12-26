@@ -1,0 +1,12 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Луцевич";
+block content
+	div.page-prep(data-role="page")
+		div(data-role="header")
+			h1 Александр Сергеевич ЛУЦЕВИЧ
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
+		div.ui-content(role="main")
+			p Александр Сергеевич ЛУЦЕВИЧ 
+		// footer
+		include ../../inc/inner-footer.pug

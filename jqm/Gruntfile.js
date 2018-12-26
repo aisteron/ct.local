@@ -18,6 +18,7 @@ module.exports = function(grunt){
 			      'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
 			      'assets/src/pages/subj-html/rus.html':['assets/src/pages/subj-pug/rus.pug'],
 			      'assets/src/pages/prep-html/hodac.html':['assets/src/pages/prep-pug/hodac.pug'],
+			      'assets/src/pages/prep-html/lutj.html':['assets/src/pages/prep-pug/lutj.pug']
 			    },
 			    
 			  }

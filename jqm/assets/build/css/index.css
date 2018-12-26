@@ -107,34 +107,69 @@ a.blue-button:hover {
   border: 1px solid #fff;
 }
 .arc,
+.inner-footer,
 .page-subj .blue-arc,
-.page-subj .results,
-.page-subj .inner-footer {
+.page-subj .results {
   background-color: #334458;
   color: #fff;
   margin: 0 -1rem;
   padding: 1rem;
 }
 .arc svg,
+.inner-footer svg,
 .page-subj .blue-arc svg,
-.page-subj .results svg,
-.page-subj .inner-footer svg {
+.page-subj .results svg {
   height: 40px;
   width: 100vw;
   margin: -1rem -1rem 0;
 }
 .arc svg path,
+.inner-footer svg path,
 .page-subj .blue-arc svg path,
-.page-subj .results svg path,
-.page-subj .inner-footer svg path {
+.page-subj .results svg path {
   stroke: none;
   fill: #f9f9f9;
 }
 .arc h2,
+.inner-footer h2,
 .page-subj .blue-arc h2,
-.page-subj .results h2,
-.page-subj .inner-footer h2 {
+.page-subj .results h2 {
   margin-top: 0;
+}
+div[data-role="footer"] ul.ui-grid-b li a.ui-btn-active {
+  color: #fff;
+  background-color: #334458;
+  text-shadow: 0 1px 0 #1e1f21;
+  border-color: #414346;
+}
+div[data-role="footer"] ul.ui-grid-b li a.ui-btn-active:focus {
+  border-color: #414346;
+  box-shadow: 0 0 12px #535c63;
+}
+.inner-footer {
+  padding-left: 2rem;
+  text-shadow: none;
+}
+.inner-footer img {
+  width: 140px;
+  margin: 0 auto;
+  display: block;
+}
+.inner-footer a {
+  color: #fff;
+  font-weight: normal;
+}
+.inner-footer ul {
+  padding-left: 0;
+}
+.inner-footer ul li {
+  line-height: 2;
+}
+.inner-footer .small {
+  margin-top: 2rem;
+}
+.inner-footer .small p {
+  font-size: 0.8rem;
 }
 .page-subj {
   font-family: Roboto;
@@ -250,24 +285,6 @@ a.blue-button:hover {
   border: 2px solid #fff;
   margin: 1rem 1rem 1rem 0;
 }
-.page-subj .inner-footer img {
-  width: 140px;
-  margin: 0 auto;
-  display: block;
-}
-.page-subj .inner-footer a {
-  color: #fff;
-  font-weight: normal;
-}
-.page-subj .inner-footer ul li {
-  line-height: 2;
-}
-.page-subj .inner-footer .small {
-  margin-top: 2rem;
-}
-.page-subj .inner-footer .small p {
-  font-size: 0.8rem;
-}
 .page-prep .post-header {
   height: 250px;
   background-size: cover;
@@ -280,6 +297,32 @@ a.blue-button:hover {
   color: #fff;
   position: absolute;
   padding: 1rem;
+  bottom: 0;
+}
+.page-prep .ui-tabs {
+  margin: 0 -1rem;
+  padding: 0;
+}
+.page-prep .ui-tabs .ui-btn.ui-btn-active {
+  color: #fff;
+  background-color: #334458;
+  text-shadow: 0 1px 0 #1e1f21;
+  border-color: #414346;
+}
+.page-prep .ui-tabs .ui-btn.ui-btn-active:focus {
+  border-color: #414346;
+  box-shadow: 0 0 12px #535c63;
+}
+.page-prep .ui-content .swiper-wrapper {
+  padding-bottom: 2rem;
+}
+.page-prep .ui-content .swiper-pagination-bullet-active {
+  color: #334458;
+  background: #334458;
+}
+.page-prep .ui-content .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
 }
 .main-page div[data-role="header"] {
   background: #334458;
