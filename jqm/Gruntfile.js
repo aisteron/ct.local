@@ -18,7 +18,16 @@ module.exports = function(grunt){
 			      'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
 			      'assets/src/pages/subj-html/rus.html':['assets/src/pages/subj-pug/rus.pug'],
 			      'assets/src/pages/prep-html/hodac.html':['assets/src/pages/prep-pug/hodac.pug'],
-			      'assets/src/pages/prep-html/lutj.html':['assets/src/pages/prep-pug/lutj.pug']
+			      'assets/src/pages/prep-html/lutj.html':['assets/src/pages/prep-pug/lutj.pug'],
+			      'assets/src/pages/prep-html/lutj2.html':['assets/src/pages/prep-pug/lutj2.pug'],
+			      'assets/src/pages/prep-html/lob.html':['assets/src/pages/prep-pug/lob.pug'],
+			      'assets/src/pages/prep-html/lap.html':['assets/src/pages/prep-pug/lap.pug'],
+			      'assets/src/pages/prep-html/shab.html':['assets/src/pages/prep-pug/shab.pug'],
+			      'assets/src/pages/prep-html/luc.html':['assets/src/pages/prep-pug/luc.pug'],
+			      'assets/src/pages/prep-html/sin.html':['assets/src/pages/prep-pug/sin.pug'],
+			      'assets/src/pages/prep-html/olymp.html':['assets/src/pages/prep-pug/olymp.pug'],
+			      'assets/src/pages/prep-html/sel.html':['assets/src/pages/prep-pug/sel.pug'],
+			      'assets/src/pages/prep-html/iv.html':['assets/src/pages/prep-pug/iv.pug']
 			    },
 			    
 			  }

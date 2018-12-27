@@ -83,6 +83,7 @@ a.white-button {
   display: block;
   margin: 1.5rem auto;
   text-align: center;
+  text-decoration: none;
 }
 a.white-button:hover {
   color: #fff;
@@ -100,6 +101,7 @@ a.blue-button {
   margin: 1.5rem auto;
   text-align: center;
   background-color: #fff;
+  text-decoration: none;
 }
 a.blue-button:hover {
   background-color: transparent;
@@ -173,6 +175,10 @@ div[data-role="footer"] ul.ui-grid-b li a.ui-btn-active:focus {
 }
 .page-subj {
   font-family: Roboto;
+}
+.page-subj p,
+.page-subj h2,
+.page-subj ul li a {
   text-shadow: none;
 }
 .page-subj h2 {
@@ -298,6 +304,7 @@ div[data-role="footer"] ul.ui-grid-b li a.ui-btn-active:focus {
   position: absolute;
   padding: 1rem;
   bottom: 0;
+  padding-bottom: 0;
 }
 .page-prep .ui-tabs {
   margin: 0 -1rem;
@@ -323,6 +330,10 @@ div[data-role="footer"] ul.ui-grid-b li a.ui-btn-active:focus {
 .page-prep .ui-content .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
+}
+.page-prep .ui-content ul li {
+  font-size: 0.85rem;
+  list-style-type: unset;
 }
 .main-page div[data-role="header"] {
   background: #334458;

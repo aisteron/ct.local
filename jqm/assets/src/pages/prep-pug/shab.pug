@@ -1,0 +1,84 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Репетитор ЦТ по английскому в Минске - Анна Ивановна Шаблинская";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Анна Ивановна Шаблинская
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/shab.jpg")
+				.desc
+					p Анна Ивановна <br> ШАБЛИНСКАЯ
+					p английский язык
+			div(data-role='tabs')
+					div(data-role='navbar')
+						ul
+							li
+								a.ui-btn-active(
+								 href='#one'
+								 data-theme='a'
+								 data-ajax='false') Информация
+							li
+								a(href='#two', data-theme='a', data-ajax='false') Отзывы
+							li
+								a(href='#three', data-theme='a', data-ajax='false') Видео
+					#one.ui-content
+						h4 Образование
+						p Минский государственный лингвистический университет (МГЛУ), факультет английского языка
+						
+						h4 О преподавателе
+						p Специализация в качестве профессионального репетитора по школьной программе, подготовка для поступления в гимназии и лицеи, а также подготовка к ЦТ. Опыт работы – 4 года.
+
+						h4 Методика обучения
+						p Происходит разработка для каждого ученика уникальной программы и поиск общего языка с каждым из учащихся.
+
+						h4 Расписание ближайших занятий
+						table.ui-responsive.table-stroke(
+						data-role="table" 
+						id="subj-table" 
+						data-mode="columntoggle"
+						data-column-btn-text="Настройка столбцов.."
+						)
+							thead
+								tr
+									th(data-priority="1") Дата
+									th Время 
+									th(data-priority="1") Предмет
+							tbody
+								tr
+									td 12 дек
+									td 16.30-18.00
+									td английский
+								tr
+									td 13 дек
+									td 16.30-18.00 
+									td английский
+							a.white-button(href="#lead"  data-rel="popup") Записаться			
+					#two.ui-content
+						h4 Отзывы о преподавателе
+						.swiper-container.lazyload(
+					data-script="/jqm/dist/js/swiper.min.js" 
+					data-link="/jqm/dist/css/swiper.min.css")
+							.swiper-wrapper
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est autem molestias reprehenderit optio asperiores nam quas eos commodi, excepturi ab molestiae cupiditate totam architecto ipsum animi culpa suscipit maiores vero.
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolorum commodi, voluptatibus velit veritatis recusandae. Perspiciatis, praesentium! Dignissimos, dolores. Voluptas hic fugit similique doloremque ipsum doloribus sunt quas, aliquid ratione.
+							.swiper-pagination
+						a.white-button(href="#lead" data-rel="popup") Записаться
+					#three.ui-content
+						h4 Видео
+						iframe(width="100%" 
+						height="315" 
+						src="https://www.youtube.com/embed/xB0l1NvfiIw" frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug					

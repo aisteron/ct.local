@@ -1,0 +1,78 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Репетитор ЦТ по химии/физике в Минске - Светлана Ивановна Лапко";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Светлана Ивановна Лапко
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/lap.jpg")
+				.desc
+					p Светлана Ивановна <br>ЛАПКО
+					p химия, физика
+			div(data-role='tabs')
+					div(data-role='navbar')
+						ul
+							li
+								a.ui-btn-active(
+								 href='#one'
+								 data-theme='a'
+								 data-ajax='false') Информация
+							li
+								a(href='#two', data-theme='a', data-ajax='false') Отзывы
+					#one.ui-content
+						h4 Образование
+						p В 1999 году закончила Белорусский государственный технологический университет (квалификация химик-технолог). В 2010 году - Белорусский государственный педагогический университет (специальность – преподаватель информатики и физики).
+						
+						h4 О преподавателе
+						p Опыт работы более 16 лет, как в средних учебных заведениях, так и в среднем специальном учебном заведении. Репетиторством занимается около 5 лет.
+
+						p Успешно прошла курсы: «Сертифицированный пользователь ИКТ в образовании в категориях «Учебно-воспитательная работа», «Административная работа».
+
+						h4 Методика обучения
+						p Занятия делит на две части: теоретическая и практическая. В первой части идет полный разбор темы, во второй – закрепление материала построено по принципу от менее сложного к более сложному. В конце каждой темы ученикам предлагается пройти тест (на время) для определения уровня усвоения материала.
+
+						h4 Расписание ближайших занятий
+						table.ui-responsive.table-stroke(
+						data-role="table" 
+						id="subj-table" 
+						data-mode="columntoggle"
+						data-column-btn-text="Настройка столбцов.."
+						)
+							thead
+								tr
+									th(data-priority="1") Дата
+									th Время 
+									th(data-priority="1") Предмет
+							tbody
+								tr
+									td 12 дек
+									td 16.30-18.00
+									td химия
+								tr
+									td 13 дек
+									td 16.30-18.00 
+									td физика
+							a.white-button(href="#lead"  data-rel="popup") Записаться			
+					#two.ui-content
+						h4 Отзывы о преподавателе
+						.swiper-container.lazyload(
+					data-script="/jqm/dist/js/swiper.min.js" 
+					data-link="/jqm/dist/css/swiper.min.css")
+							.swiper-wrapper
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est autem molestias reprehenderit optio asperiores nam quas eos commodi, excepturi ab molestiae cupiditate totam architecto ipsum animi culpa suscipit maiores vero.
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolorum commodi, voluptatibus velit veritatis recusandae. Perspiciatis, praesentium! Dignissimos, dolores. Voluptas hic fugit similique doloremque ipsum doloribus sunt quas, aliquid ratione.
+							.swiper-pagination
+						a.white-button(href="#lead" data-rel="popup") Записаться
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug					

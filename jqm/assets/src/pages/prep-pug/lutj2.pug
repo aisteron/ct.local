@@ -1,0 +1,99 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Луцевич Софья";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Софья Геннадьевна ЛУЦЕВИЧ
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/lutj2.jpg")
+				.desc
+					p Софья Геннадьевна <br>ЛУЦЕВИЧ
+					p русский язык и литература
+			div(data-role='tabs')
+				div(data-role='navbar')
+					ul
+						li
+							a.ui-btn-active(
+							 href='#one'
+							 data-theme='a'
+							 data-ajax='false') Информация
+						li
+							a(href='#two', data-theme='a', data-ajax='false') Отзывы
+				#one.ui-content
+					h4 Образование
+					p БГУ. Филологический факультет. Специальность: "Филолог. Преподаватель русского языка и литературы. Специалист по деловой коммуникации".
+
+					h4 О преподавателе
+					p Филологический факультет БГУ (Специальность - "Филолог. Преподаватель русского языка и литературы. Специалист по деловой коммуникации").
+					p Практикующий специалист в изучении русского языка (работаю со школьниками всех возрастов и взрослыми, изучающими русский язык как иностранный).
+					p Постоянно совершенствуется лично и профессионально. Насыщает программы обучения эффективными методиками. Чтобы Вы как можно скорее почувствовали результат.
+
+					h4 Методика обучения
+					p Методика проведения занятий подбирается для каждого ученика индивидуально после тестирования текущего уровня ученика по предмету.
+
+					p: b Что делаем на занятиях по школьной программе?
+
+					ul 
+						li Выявляем и устраняем пробелы в знаниях
+						li Занимаемся по темам, которые ученик проходит в школе, углубляя знания по ним
+						li При желании и достаточной мотивации ученика, опережаем школьную программу и постоянно совершенствуемся в уже полученных знаниях
+						li Работают с наглядным материалом: таблицами, схемами, презентациями
+						li Практикуем нестандартные методы работы в игровой форме, позволяющие ученику проникнуться искренним интересом к предмету
+						li Ставим правильную и красивую устную речь
+
+					p: b Как готовимся к ЦТ?
+
+					ul
+						li Прорабатываем все темы школьной программы, знание которых необходимо для сдачи ЦТ;
+						li Практика и ещё больше практики: никому не нужно бездумное знание теории. Поэтому мы на занятиях учимся решать реальные практические задания и тесты. Мы работаем над тем, с чем абитуриент столкнётся в день сдачи ЦТ;
+						li Постоянно повторяем и закрепляем уже пройденный материал так, чтобы ни одна тема не вылетела из головы;
+						li Упорядочивание знаний в голове ученика. Хаотично разбросанные знания никак не помогут подготовиться к ЦТ. Именно поэтому всё раскладываем по полочкам;
+						li Отрабатываем пропущенные или отменённые занятия. Ведь каждое занятие на вес золота. И даже если ученик или преподаватель заболел, и занятия пришлось отменить - это не проблема. Отработки в другой день в личном / скайп-формате - обязательный элемент обучения;
+						li Готовые материалы для подготовки. Не придётся разоряться на сборниках, мучительно выискивать то тут, то там нужное правило. Преподавателем уже разработан готовый курс по подготовке к ЦТ, в котором обобщён лучший опыт подготовки предыдущих поколений абитуриентов. Ученик получает к нему доступ в начале занятий с преподавателем. Из литературы нужно будет купить только 2 тестовых сборника.
+
+					h4 Расписание ближайших занятий
+					table.ui-responsive.table-stroke(
+					data-role="table" 
+					id="subj-table" 
+					data-mode="columntoggle"
+					data-column-btn-text="Настройка столбцов.."
+					)
+						thead
+							tr
+								th(data-priority="1") Дата
+								th Время 
+								th(data-priority="1") Предмет
+						tbody
+							tr
+								td 12 дек
+								td 16.30-18.00
+								td русский язык	
+							tr
+								td 13 дек
+								td 16.30-18.00
+								td литература
+						a.white-button(href="#lead"  data-rel="popup") Записаться			
+				#two.ui-content
+					h4 Отзывы о преподавателе
+					.swiper-container.lazyload(
+				data-script="/jqm/dist/js/swiper.min.js" 
+				data-link="/jqm/dist/css/swiper.min.css")
+						.swiper-wrapper
+							.swiper-slide
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem rem eligendi minus sed quo eius ipsam, dolor nulla molestias et suscipit animi? Maiores rem assumenda odio quia alias vero soluta!
+							.swiper-slide
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sed vero nostrum iste nobis ipsum, pariatur neque deserunt expedita velit non tempore aliquid quae, est et quod numquam repellendus illum?
+						.swiper-pagination
+					a.white-button(href="#lead" data-rel="popup") Записаться				
+
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug			

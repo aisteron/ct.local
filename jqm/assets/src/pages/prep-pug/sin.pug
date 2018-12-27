@@ -1,0 +1,90 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Репетитор ЦТ по белорусскому языку в Минске - Ирина Александровна Синявская";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Ирина Александровна Синявская
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/sin.jpg")
+				.desc
+					p Ирина Александровна <br>СИНЯВСКАЯ
+					p русский язык, литература
+			div(data-role='tabs')
+					div(data-role='navbar')
+						ul
+							li
+								a.ui-btn-active(
+								 href='#one'
+								 data-theme='a'
+								 data-ajax='false') Информация
+							li
+								a(href='#two', data-theme='a', data-ajax='false') Отзывы
+							li
+								a(href='#three', data-theme='a', data-ajax='false') Видео
+					#one.ui-content
+						h4 Образование
+						p Белорусский государственный университет (БГУ), филологический факультет (отделение "Русская филология")
+						
+						h4 О преподавателе
+						p Опыт репетиторской работы – 4 года. Пройдены курсы повышения квалификации РИПО по программе "Технологии активизации учебно-познавательной деятельности обучающихся". В наличии сертификат пользователя информационных технологий в образовании в категории "Учебно-воспитательная работа".
+
+						h4 Методика обучения
+						p Индивидуальный подход к каждому ученику, внимание к каждому вопросу и трудности. Методика преподавания: занятие состоит из трех этапов:
+						p 1. Обязательная проверка практической и теоретической части домашнего задания, проверка знания словарных слов и слов, трудных для написания;
+						p 2. Изложение теоретического материала по определенной теме с использованием различных средств обучения (схемы, таблицы, алгоритмы, кластеры, распечатки) и мнемонических приемов запоминания материала;
+						p 3. Решение тестовых заданий по теме занятия а также вариантов ЦТ и РТ предыдущих лет, демонстрационных тестов и тестов, максимально приближенных к ЦТ.
+						p На занятии используются учебные пособия, разработанные специально для абитуриентов, а также все знания и опыт в подготовке к ЦТ преподавателя. Ни один вопрос не остается без ответа.
+
+ 
+
+						h4 Расписание ближайших занятий
+						table.ui-responsive.table-stroke(
+						data-role="table" 
+						id="subj-table" 
+						data-mode="columntoggle"
+						data-column-btn-text="Настройка столбцов.."
+						)
+							thead
+								tr
+									th(data-priority="1") Дата
+									th Время 
+									th(data-priority="1") Предмет
+							tbody
+								tr
+									td 12 дек
+									td 16.30-18.00
+									td русский
+								tr
+									td 13 дек
+									td 16.30-18.00 
+									td литература
+							a.white-button(href="#lead"  data-rel="popup") Записаться			
+					#two.ui-content
+						h4 Отзывы о преподавателе
+						.swiper-container.lazyload(
+					data-script="/jqm/dist/js/swiper.min.js" 
+					data-link="/jqm/dist/css/swiper.min.css")
+							.swiper-wrapper
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est autem molestias reprehenderit optio asperiores nam quas eos commodi, excepturi ab molestiae cupiditate totam architecto ipsum animi culpa suscipit maiores vero.
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolorum commodi, voluptatibus velit veritatis recusandae. Perspiciatis, praesentium! Dignissimos, dolores. Voluptas hic fugit similique doloremque ipsum doloribus sunt quas, aliquid ratione.
+							.swiper-pagination
+						a.white-button(href="#lead" data-rel="popup") Записаться
+					#three.ui-content
+						h4 Видео
+						iframe.lazyload(width="100%" 
+						height="315" 
+						data-src="https://www.youtube.com/embed/E762hVS_E1c" frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug					

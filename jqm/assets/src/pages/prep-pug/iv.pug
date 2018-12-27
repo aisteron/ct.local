@@ -1,0 +1,80 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Репетитор ЦТ по Белорусскому языку - Полина Александровна Иванова";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Полина Александровна Иванова
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/iv.jpg")
+				.desc
+					p Полина Александровна <br>ИВАНОВА
+					p белорусский язык
+			div(data-role='tabs')
+					div(data-role='navbar')
+						ul
+							li
+								a.ui-btn-active(
+								 href='#one'
+								 data-theme='a'
+								 data-ajax='false') Информация
+							li
+								a(href='#two', data-theme='a', data-ajax='false') Отзывы
+					#one.ui-content
+						h4 Образование
+						p Минский государственный лингвистический университет (МГЛУ)
+						
+						h4 О преподавателе
+						p Профессиональный репетитор для детей и взрослых с разным уровнем знаний (постановка произношения, обучение профессиональному и разговорному языку, подготовка к ЦТ, поступлению в гимназию, лицей, ВУЗ, подготовка к олимпиадам, бизнес- и IT-английский). Опыт - 5 лет, из них преподавания в школе/гимназии — 3 года.
+
+						h4 Методика обучения
+						p Принцип освоения языка через развитие у ученика языкового чутья. Использование только оригинальной литературы, созданной носителями языка, проведение занятий по авторским, специально разработанным для каждого курса методикам, в которых нет места шаблонам и устаревшим формам работы.
+
+						h4 Расписание ближайших занятий
+						table.ui-responsive.table-stroke(
+						data-role="table" 
+						id="subj-table" 
+						data-mode="columntoggle"
+						data-column-btn-text="Настройка столбцов.."
+						)
+							thead
+								tr
+									th(data-priority="1") Дата
+									th Время 
+									th(data-priority="1") Предмет
+							tbody
+								tr
+									td 12 дек
+									td 16.30-18.00
+									td белорусский	
+								tr
+									td 13 дек
+									td 16.30-18.00
+									td белорусский
+							a.white-button(href="#lead"  data-rel="popup") Записаться			
+					#two.ui-content
+						h4 Отзывы о преподавателе
+						.swiper-container.lazyload(
+					data-script="/jqm/dist/js/swiper.min.js" 
+					data-link="/jqm/dist/css/swiper.min.css")
+							.swiper-wrapper
+								.swiper-slide
+									p Отличный преподаватель! 
+									p Очень хорошо справилась с задачей, помогла подготовиться к интервью , в результате - успешное его прохождение.
+									p Занятия проходили в приятной положительной атмосфере.
+								.swiper-slide
+									p Очень отличный преподаватель, сразу определяет твой уровень и выстраивает программу под тебя (а не как в школе). Гибкий график занятий, удобное расположение в Малиновке. Спасибо, буду продолжать
+								.swiper-slide
+									p Долго выбирал преподавателя! Вот вчера сходил на первое занятие, очень понравилось, буду дальше продолжать у Вас заниматься. Спасибо!	
+							.swiper-pagination
+						a.white-button(href="#lead" data-rel="popup") Записаться
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug					

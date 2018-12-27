@@ -49,26 +49,20 @@ document.querySelectorAll('.main-page .ui-collapsible-heading').forEach(function
 	})
 })
 
-// подмена пути в ссылках в дочерних страницах в футере
-/*
-$(window).on( "pageload", function( event ) {
-	console.log('page load');
-	let footer = $('div[data-role="footer"]');
 
-	footer.find('a').each(function(i, e){
-		//console.log(e.attr('href'));
-		let href = e.getAttribute('href');
-		e.setAttribute('href','/jqm/'+href);
-		e.setAttribute('data-rel', 'back');
-		//console.log(e);
-		e.addEventListener('click', function(n){
-				window.history.back();
-				console.log('ku');
-		})
+/*полезный костыль*/
+$(document).ready(function(){
+	//
+	if(window.location.href.split('/').length < 9 && window.location.href.split('/')[4] !== '')
+	{
+		let e = window.location.href.split('/')[4].replace('#','');
+		let name = document.querySelector('a[name="'+e+'"]');
 
+		setTimeout(function(){
+			$('div[data-role="footer"] a[href="#'+e+'"]').addClass('ui-btn-active');
+			name.scrollIntoView({  behavior: 'smooth' });
+			console.log('hi');
+		}, 1000)
 		
-	})
-
-
+	}
 })
-*/

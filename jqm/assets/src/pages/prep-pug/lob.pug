@@ -1,0 +1,80 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Репетитор ЦТ по математике в Минске - Мария Ивановна Лобода";
+block content
+	.page-prep(data-role="page")
+		div(data-role="header")
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(
+			href="/jqm/" 
+			data-ajax="false")
+			h1 Мария Ивановна Лобода
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/lob.jpg")
+				.desc
+					p Мария Ивановна <br>ЛОБОДА
+					p математика
+			div(data-role='tabs')
+					div(data-role='navbar')
+						ul
+							li
+								a.ui-btn-active(
+								 href='#one'
+								 data-theme='a'
+								 data-ajax='false') Информация
+							li
+								a(href='#two', data-theme='a', data-ajax='false') Отзывы
+					#one.ui-content
+						h4 Образование
+						p 2-высших образовпния:
+						ul
+							li БНТУ энергетический факультет ( инженер-энергетик)
+							li РИИТ БНТУ инновационный менеджмент (экономист-менеджер)
+							li магистр технических наук БНТУ
+						
+						h4 О преподавателе
+						p Специализация в качестве профессионального репетитора для подготовки к ЦТ. Опыт репетиторства 5 лет.
+
+						h4 Методика обучения
+						p Мария Ивановна использует индивидуальный подход (даже в группе) и особую методику преподавания, которая помогает каждому ученику устранить пробелы и полюбить математику. Углубленное изучение материала, в то же время, позволяет развить логическое и аналитическое мышление.
+
+						h4 Расписание ближайших занятий
+						table.ui-responsive.table-stroke(
+						data-role="table" 
+						id="subj-table" 
+						data-mode="columntoggle"
+						data-column-btn-text="Настройка столбцов.."
+						)
+							thead
+								tr
+									th(data-priority="1") Дата
+									th Время 
+									th(data-priority="1") Предмет
+							tbody
+								tr
+									td 12 дек
+									td 16.30-18.00
+									td математика	
+								tr
+									td 13 дек
+									td 16.30-18.00
+									td математика
+							a.white-button(href="#lead"  data-rel="popup") Записаться			
+					#two.ui-content
+						h4 Отзывы о преподавателе
+						.swiper-container.lazyload(
+					data-script="/jqm/dist/js/swiper.min.js" 
+					data-link="/jqm/dist/css/swiper.min.css")
+							.swiper-wrapper
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est autem molestias reprehenderit optio asperiores nam quas eos commodi, excepturi ab molestiae cupiditate totam architecto ipsum animi culpa suscipit maiores vero.
+								.swiper-slide
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolorum commodi, voluptatibus velit veritatis recusandae. Perspiciatis, praesentium! Dignissimos, dolores. Voluptas hic fugit similique doloremque ipsum doloribus sunt quas, aliquid ratione.
+							.swiper-pagination
+						a.white-button(href="#lead" data-rel="popup") Записаться
+		// footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug					
