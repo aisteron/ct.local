@@ -72,6 +72,9 @@ ul li a {
 .ui-panel-page-content-display-push {
   margin-left: 0 !important;
 }
+#inner-shock {
+  background-color: #fff;
+}
 a.white-button {
   border: 1px solid #334458;
   border-radius: 20px;

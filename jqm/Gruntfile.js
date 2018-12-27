@@ -5,41 +5,44 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 
 		pug: 
-			{
-			  compile: {
-			    options: {
-			      data: {
-			        debug: false
-			      }
-			    },
-			    
-			    files: {
-			      'index.html':['assets/src/index.pug'],
-			      'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
-			      'assets/src/pages/subj-html/rus.html':['assets/src/pages/subj-pug/rus.pug'],
-			      'assets/src/pages/prep-html/hodac.html':['assets/src/pages/prep-pug/hodac.pug'],
-			      'assets/src/pages/prep-html/lutj.html':['assets/src/pages/prep-pug/lutj.pug'],
-			      'assets/src/pages/prep-html/lutj2.html':['assets/src/pages/prep-pug/lutj2.pug'],
-			      'assets/src/pages/prep-html/lob.html':['assets/src/pages/prep-pug/lob.pug'],
-			      'assets/src/pages/prep-html/lap.html':['assets/src/pages/prep-pug/lap.pug'],
-			      'assets/src/pages/prep-html/shab.html':['assets/src/pages/prep-pug/shab.pug'],
-			      'assets/src/pages/prep-html/luc.html':['assets/src/pages/prep-pug/luc.pug'],
-			      'assets/src/pages/prep-html/sin.html':['assets/src/pages/prep-pug/sin.pug'],
-			      'assets/src/pages/prep-html/olymp.html':['assets/src/pages/prep-pug/olymp.pug'],
-			      'assets/src/pages/prep-html/sel.html':['assets/src/pages/prep-pug/sel.pug'],
-			      'assets/src/pages/prep-html/iv.html':['assets/src/pages/prep-pug/iv.pug']
-			    },
-			    
-			  }
-			},
-		less: 
-			{
+		{
+			compile: {
+				options: {
+					data: {
+						debug: false
+					}
+				},
 
-			  production: {
-			    options: 
-				    {
-						sourceMapURL:'/jqm/assets/build/css/index.css.map',
-						sourceMap:true,
+				files: {
+					/*
+					'index.html':['assets/src/index.pug'],
+					'assets/src/pages/subj-html/bio.html':['assets/src/pages/subj-pug/bio.pug'],
+					'assets/src/pages/subj-html/rus.html':['assets/src/pages/subj-pug/rus.pug'],
+					'assets/src/pages/subj-html/history.html':['assets/src/pages/subj-pug/history.pug'],*/
+
+					'assets/src/pages/prep-html/lutj.html':['assets/src/pages/prep-pug/lutj.pug'],
+					/*'assets/src/pages/prep-html/lutj2.html':['assets/src/pages/prep-pug/lutj2.pug'],
+					'assets/src/pages/prep-html/hodac.html':['assets/src/pages/prep-pug/hodac.pug'],					
+					'assets/src/pages/prep-html/lob.html':['assets/src/pages/prep-pug/lob.pug'],
+					'assets/src/pages/prep-html/lap.html':['assets/src/pages/prep-pug/lap.pug'],
+					'assets/src/pages/prep-html/shab.html':['assets/src/pages/prep-pug/shab.pug'],
+					'assets/src/pages/prep-html/luc.html':['assets/src/pages/prep-pug/luc.pug'],
+					'assets/src/pages/prep-html/sin.html':['assets/src/pages/prep-pug/sin.pug'],
+					'assets/src/pages/prep-html/olymp.html':['assets/src/pages/prep-pug/olymp.pug'],
+					'assets/src/pages/prep-html/sel.html':['assets/src/pages/prep-pug/sel.pug'],
+					'assets/src/pages/prep-html/iv.html':['assets/src/pages/prep-pug/iv.pug']*/
+				},
+
+			}
+		},
+		less: 
+		{
+
+			production: {
+				options: 
+				{
+					sourceMapURL:'/jqm/assets/build/css/index.css.map',
+					sourceMap:true,
 
 						// временно отлючаю плагины, т.к. sourcemap не работает с ними.
 						/*
@@ -50,24 +53,24 @@ module.exports = function(grunt){
 				        ],
 				        */
 				    },
-			    files: 
+				    files: 
 				    {
-				      'assets/build/css/index.css': 'assets/src/less/index.less'
-				     
-				    }
-			  }
-			},	
-	
+				    	'assets/build/css/index.css': 'assets/src/less/index.less'
 
-		watch:
+				    }
+				}
+			},	
+
+
+			watch:
 			{
 				css:
 				{
 					files:['assets/src/less/*.less'],
 					tasks:['less'],
 					options: {
-				      livereload: true,
-				    }
+						livereload: true,
+					}
 				},
 				/*
 				scripts:
@@ -88,26 +91,26 @@ module.exports = function(grunt){
 					'assets/src/pages/prep-pug/*.pug'],
 					tasks:['pug'],
 					options: {
-				      livereload: true,
-				    }
+						livereload: true,
+					}
 				}
 			},
 
-		browserSync: 
+			browserSync: 
 			{
-	            dev: {
-	                bsFiles: {
-	                    src : [
-                        'assets/build/css/*.css',
-                        'index.html'
-                    ]
-	                },
-	                options: {
-	                    watchTask: true,
-	                    proxy: 'ct.local/jqm/'
-	                }
-	            }
-	        },
+				dev: {
+					bsFiles: {
+						src : [
+						'assets/build/css/*.css',
+						'index.html'
+						]
+					},
+					options: {
+						watchTask: true,
+						proxy: 'ct.local/jqm/'
+					}
+				}
+			},
 
 	    /*concat: 
 	    	{

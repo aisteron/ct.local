@@ -65,4 +65,6 @@ $(document).ready(function(){
 		}, 1000)
 		
 	}
+	// multipage popup init
+	$( "#inner-shock" ).enhanceWithin().popup();
 })
