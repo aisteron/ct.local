@@ -1,0 +1,88 @@
+extends ../../inc/layout.pug
+block head
+	- var title="Игорь Лапко";
+block content
+	div.page-prep(data-role="page")
+		div(data-role="header")
+			h1 Игорь Иванович ЛАПКО
+			a.ui-btn.ui-icon-arrow-l.ui-btn-icon-notext.ui-corner-all.ui-btn-left(href="/jqm/" data-rel="back" data-direction="reverse")
+			a.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-corner-all.ui-btn-right(href="#drawer")
+		div.ui-content(role="main")
+			.post-header.lazyload(data-bg="/jqm/assets/img/preps-images/ig.jpg")
+				.desc
+					p Игорь Иванович <br> ЛАПКО
+					p математика 
+			div(data-role='tabs')
+				div(data-role='navbar')
+					ul
+						li
+							a.ui-btn-active(
+							 href='#one'
+							 data-theme='a'
+							 data-ajax='false') Информация
+						li
+							a(href='#two', data-theme='a', data-ajax='false') Отзывы
+				#one.ui-content
+					h4 Образование
+					p БГПУ им.М.Танка (преподаватель математики и информатики)
+					
+					h4 О преподавателе
+					p Стаж работы педагогом 19 лет
+
+					p Опыт репетиторской работы – 5 лет
+					p За время работы учителем неоднократно пройдены курсы повышения квалификации в МОИРО, кроме того тематические курсы по подготовке к олимпиадам. Достижения: победы и призовые места в первом этапе Республиканской олимпиаде по математике.
+					p В наличии сертификаты пользователя информационных технологий в образовании в категории "Учебно-воспитательная работа" и «Административная работа».
+					
+					h4 Методика обучения
+					p Основными принципами в работе являются научность, доступность, многократное повторение, сотрудничество, индивидуальное обучение.
+
+					p Этапы подготовки к ЦТ:
+
+					ul
+						li Развитие интереса к математике.
+						li Формирование и отработка вычислительных навыков.
+						li Развитие математического и логического мышления
+						li Повторение, систематизация знаний, умений, навыков.
+
+					h4 Расписание ближайших занятий
+					table.ui-responsive.table-stroke(
+					data-role="table" 
+					id="subj-table" 
+					data-mode="columntoggle"
+					data-column-btn-text="Настройка столбцов.."
+					)
+						thead
+							tr
+								th(data-priority="1") Дата
+								th Время 
+								th(data-priority="1") Предмет
+						tbody
+							tr
+								td 12 дек
+								td 16.30-18.00
+								td математика	
+							tr
+								td 13 дек
+								td 16.30-18.00
+								td математика
+					a.white-button(href="#lead"  data-rel="popup") Записаться			
+				#two.ui-content
+					h4 Отзывы о преподавателе
+					.swiper-container.lazyload(
+				data-script="/jqm/dist/js/swiper.min.js" 
+				data-link="/jqm/dist/css/swiper.min.css")
+						.swiper-wrapper
+							.swiper-slide
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem rem eligendi minus sed quo eius ipsam, dolor nulla molestias et suscipit animi? Maiores rem assumenda odio quia alias vero soluta!
+							.swiper-slide
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sed vero nostrum iste nobis ipsum, pariatur neque deserunt expedita velit non tempore aliquid quae, est et quod numquam repellendus illum?
+						.swiper-pagination
+					a.white-button(href="#lead" data-rel="popup") Записаться
+
+
+		// inner footer
+		include ../../inc/inner-footer.pug
+		// POPUP
+		include ../../inc/popup.pug
+		// NAVIGATION DRAWER
+		include ../../inc/drawer.pug

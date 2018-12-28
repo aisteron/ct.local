@@ -1,5 +1,6 @@
 console.log('hi, i`m jqm');
 
+
 function smooth_scroll(e)
 {
 	e.addEventListener('click', function(n){
@@ -67,4 +68,20 @@ $(document).ready(function(){
 	}
 	// multipage popup init
 	$( "#inner-shock" ).enhanceWithin().popup();
-})
+});
+
+// расписание
+if(!localStorage.getItem('json'))
+{
+	$.ajax({
+		url: "http://limocity.by/parser/json.php",
+		type: "GET",
+		success: function (response){
+			localStorage.setItem('json', response);
+		}
+	});
+} else 
+{
+	console.log(JSON.parse(localStorage.getItem('json')));
+}
+
